@@ -19,7 +19,8 @@
     <div class="header-nav container hidden-xs">
       <!-- 导航logo -->
       <div class="header-nav-logo">
-        <img src="@/assets/img/logo_black.png">
+        <img style="height:80px" src="@/assets/img/logo_black.png">
+        <img style="height:56px;left:110px;" src="@/assets/img/logo-text.png">
       </div>
       <!-- 导航内容 -->
       <ul class="header-nav-wrapper">
@@ -144,7 +145,7 @@ export default {
   color: #fff;
   font-size: 12px;
   line-height: 50px;
-  background: #f67c01;
+  background: #B18147;
   display: none;
 }
 /* 顶部的图标 */
@@ -208,7 +209,7 @@ export default {
   height: 2px;
   opacity: 0;
   transition: all 0.6s ease;
-  background-color: #f67c01;
+  background-color: #B18147;
 }
 /* 导航栏 每个导航下面的 a 链接的右侧小三角 */
 #header .header-nav .header-nav-wrapper > li > a > span {
@@ -217,7 +218,7 @@ export default {
 }
 /* 导航栏 每个导航下面的 a 链接 鼠标滑上去的样式 */
 #header .header-nav .header-nav-wrapper > li > a:hover {
-  color: #f67c01;
+  color: #B18147;
   text-decoration: none;
 }
 /* 导航栏 每个导航下面的 a 链接 鼠标滑上去下划线的样式 */
@@ -232,9 +233,10 @@ export default {
 }
 /* 导航栏 每个导航下面的 a 链接 鼠标点击后的样式 */
 #header .header-nav .header-nav-wrapper > li.active > a {
-  color: #f67c01;
+  color: #B18147;
   text-decoration: none;
-  border-bottom: 2px solid #f67c01;
+  border-bottom: 2px solid #B18147;
+  font-weight: 600;
 }
 /* 导航栏 每个导航下面的二级导航容器 */
 #header .header-nav .header-nav-wrapper > li > dl {
@@ -291,7 +293,7 @@ export default {
     height: 50px;
     font-size: 20px;
     line-height: 50px;
-    background: #f67c01;
+    background: #B18147;
     position: relative;
   }
   /* 导航栏 菜单图标 */
@@ -312,7 +314,7 @@ export default {
     top: 50px;
     left: 0;
     width: 100%;
-    background: #f67c01;
+    background: #B18147;
     z-index: 9999999;
   }
   /* 导航栏 每个导航 */

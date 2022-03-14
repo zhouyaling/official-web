@@ -55,7 +55,7 @@
     <!-- 客户评价 -->
     <div id="customer" class="container-fuild">
       <div class="container customer-container">
-        <p class="customer-title text-center">客户评价</p>
+        <p class="customer-title text-center">优秀猎头</p>
         <div class="swiper-container customer-swiper hidden-xs">
           <div class="swiper-wrapper">
             <div class="swiper-slide customer-block" v-for="(item,index) in customerList" :key="index">
@@ -63,12 +63,17 @@
                 <img class="center-block" :src="item.logo" alt="logo">
               </div>
               <div class="customer-yh">
-                <img src="@/assets/img/yinhao.png" alt="引号">
+                <!-- <img src="@/assets/img/yinhao.png" alt="引号"> -->
+              </div>
+              <div class="customer-content-name">
+                <p>谭XUEHAO 高级人力资源师</p>
               </div>
               <div class="customer-content1">
-                <small>{{item.content}}</small>
+                <p>人力资源协会执行会长、女企业家协
+                  会执行会长。曾任上市集团人力资源
+                  总监、投资发展总监</p>
               </div>
-              <div class="customer-content2">{{item.title}}</div>
+              <!-- <div class="customer-content2">{{item.title}}</div> -->
             </div>
           </div>
           <!-- 如果需要导航按钮 -->
@@ -102,10 +107,10 @@
         </div>
         <div class="row">
           <div class="col-xs-12 col-sm-6 col-md-3 server-wrapper" v-for="(item,index) in serverList" :key="index">
-            <div class="server-block wow slideInUp" onmouseenter="this.style.color='#ff6637';this.style.borderColor='#ff6637'" onmouseleave="this.style.color='#666';this.style.borderColor='#ccc'">
+            <div class="server-block wow slideInUp" onmouseenter="this.style.color='#B18147';this.style.borderColor='#B18147'" onmouseleave="this.style.color='#666';this.style.borderColor='#ccc'">
               <img class="center-block" :src="item.logo" alt="logo">
               <p class="text-center">{{item.title}}</p>
-              <div class="text-center" v-html="item.content" onmouseenter="this.style.color='#ff6637'" onmouseleave="this.style.color='#ccc'"></div>
+              <div class="text-center" v-html="item.content" onmouseenter="this.style.color='#B18147'" onmouseleave="this.style.color='#666666'"></div>
             </div>
           </div>
         </div>
@@ -141,108 +146,101 @@ export default {
         {
           img: require("@/assets/img/banner1.png"),
           path: "",
-          title: '人生需要的是机会,企业需要的是人才',
+          title: '优化个人职业生涯，助力企业健康发展',
           content: '宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介',
         },
         {
           img: require("@/assets/img/banner2.jpg"),
           path: "",
-          title: '人生需要的是机会,企业需要的是人才',
+          title: '优化个人职业生涯，助力企业健康发展',
           content: '宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介',
         },
         {
           img: require("@/assets/img/banner1.png"),
           path: "",
-          title: '人生需要的是机会,企业需要的是人才',
+          title: '优化个人职业生涯，助力企业健康发展',
           content: '宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介',
         },
         {
           img: require("@/assets/img/banner2.jpg"),
           path: "",
-          title: '人生需要的是机会,企业需要的是人才',
+          title: '优化个人职业生涯，助力企业健康发展',
           content: '宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介',
         }
       ],
       customerList: [
         {
-          logo: require("@/assets/img/logo_hp.png"),
+          logo: require("@/assets/img/img15.png"),
           title:
             "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
           content:
             "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。"
         },
         {
-          logo: require("@/assets/img/logo_kk.png"),
+          logo: require("@/assets/img/img15.png"),
           title:
             "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
           content:
             "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。"
         },
         {
-          logo: require("@/assets/img/logo_toyota.png"),
+          logo: require("@/assets/img/img15.png"),
           title:
             "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
           content:
             "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。"
         },
         {
-          logo: require("@/assets/img/logo_kk.png"),
+          logo: require("@/assets/img/img15.png"),
           title:
             "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
           content:
             "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。"
         },
         {
-          logo: require("@/assets/img/logo_hp.png"),
+          logo: require("@/assets/img/img15.png"),
           title:
             "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
           content:
             "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。"
         },
         {
-          logo: require("@/assets/img/logo_toyota.png"),
+          logo: require("@/assets/img/img15.png"),
           title:
             "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
           content:
             "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。"
         },
         {
-          logo: require("@/assets/img/logo_kk.png"),
+          logo: require("@/assets/img/img15.png"),
           title:
             "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
           content:
             "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。"
         },
         {
-          logo: require("@/assets/img/logo_hp.png"),
+          logo: require("@/assets/img/img15.png"),
           title:
             "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
           content:
             "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。"
         },
         {
-          logo: require("@/assets/img/logo_toyota.png"),
+          logo: require("@/assets/img/img15.png"),
           title:
             "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
           content:
             "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。"
         },
         {
-          logo: require("@/assets/img/logo_hp.png"),
+          logo: require("@/assets/img/img15.png"),
           title:
             "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
           content:
             "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。"
         },
         {
-          logo: require("@/assets/img/logo_kk.png"),
-          title:
-            "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
-          content:
-            "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。"
-        },
-        {
-          logo: require("@/assets/img/logo_hp.png"),
+          logo: require("@/assets/img/img15.png"),
           title:
             "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
           content:
@@ -329,7 +327,7 @@ export default {
       slidesPerView: 3,
       //自动播放
       autoplay: {
-        delay: 3000,
+        delay: 30000,
         stopOnLastSlide: false,
         disableOnInteraction: false
       },
@@ -458,25 +456,35 @@ export default {
 }
 #customer .customer-title {
   font-size: 30px;
-  color: rgb(102, 102, 102);
+  color: #B18147;
   margin: 0 0 30px;
 }
 #customer .customer-block {
   background: #fff;
-  padding: 30px;
+  padding: 40px 30px 30px 30px;
 }
 #customer .customer-logo img {
-  width: 94px;
-  height: 94px;
-  border: 1px solid #ccc;
+  width: auto;
+  height: 200px;
+  /* border: 1px solid #ccc; */
 }
 #customer .customer-yh img {
   width: 34px;
   height: 34px;
 }
+#customer .customer-content-name{
+  font-size: 20px;
+  color: rgb(33, 33, 33);
+  text-align: center;
+  margin-top: 20px;
+}
 #customer .customer-content1 {
-  padding-bottom: 20px;
-  border-bottom: 1px solid #0ce9f1;
+  font-size: 14px;
+  text-align: center;
+  color: #666666;
+  padding: 0px 40px 0px 40px;
+  line-height: 24px;
+  /* border-bottom: 1px solid #0ce9f1; */
 }
 #customer .customer-content2 {
   padding-top: 20px;
@@ -491,6 +499,7 @@ export default {
 #whyChooseUs .whyChooseUs-title p:nth-of-type(1) {
   font-size: 25px;
   font-weight: 500;
+  color: #B18147;
 }
 #whyChooseUs .whyChooseUs-title p:nth-of-type(2) {
   font-size: 14px;
@@ -670,13 +679,13 @@ export default {
   background-repeat: no-repeat;
 }
 
-.yl-img-box img{
-  margin:  0 auto;
+.yl-img-box img {
+  margin: 0 auto;
 }
 </style>
 <style>
-.swiper-pagination-bullet-active{
-  background: #888888!important;
+.swiper-pagination-bullet-active {
+  background: #888888 !important;
 }
 </style>
 

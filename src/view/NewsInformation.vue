@@ -1,15 +1,15 @@
 <template>
   <div id="NewsInformation">
-    <div class="container">
-      <div class="container text-center">
+    <div class="container container1">
+      <div class="container1 text-center">
         <h3>服务流程</h3>
         <p style="color:#b2b2b2">Company News</p>
       </div>
-      <!-- <div class="nav container text-center">
+      <!-- <div class="nav container1 text-center">
                 <a href="#" class="active">公司新闻</a>
                 <a href="#">行业动态</a>
             </div> -->
-      <ul class="news-container container-fuild">
+      <ul class="news-container1 container1-fuild">
         <li v-for="(item,index) in newsList" :key="index" class="wow fadeIn">
           <div class="content">
             <p>{{item.title}}</p>
@@ -105,11 +105,11 @@ export default {
   color: #f67c01;
   border-color: #f67c01;
 }
-.news-container {
+.news-container1 {
   overflow: hidden;
   margin-bottom: 0;
 }
-.news-container > li {
+.news-container1 > li {
   width: 55.6%;
   height: 120px;
   float: left;
@@ -118,49 +118,49 @@ export default {
   border-left: 1px solid transparent;
   border-right: 1px solid transparent;
 }
-.news-container > li:hover {
+.news-container1 > li:hover {
   color: #f67c01;
   border: 1px solid #f67c01;
   cursor: pointer;
 }
-.news-container > li:nth-of-type(2n) {
+.news-container1 > li:nth-of-type(2n) {
   float: right;
   text-align: left;
 }
-.news-container > li > .content {
+.news-container1 > li > .content {
   width: 60%;
   float: left;
   padding: 20px 0;
 }
-.news-container > li > .content p:nth-child(1) {
+.news-container1 > li > .content p:nth-child(1) {
   font-size: 20px;
   color: #666666;
   font-family: "微软雅黑";
 }
-.news-container > li > .content p:nth-child(2) {
+.news-container1 > li > .content p:nth-child(2) {
   color: #888888;
 }
-.news-container > li > .time {
+.news-container1 > li > .time {
   width: 20%;
   float: left;
   padding: 10px 0;
 }
-.news-container > li > .time span{
+.news-container1 > li > .time span{
     color: #888888;
 }
-.news-container > li > .time > p {
+.news-container1 > li > .time > p {
   font-size: 50px;
   margin: 5px 0;
   font-family: Tahoma;
-  color: rgb(255, 101, 55);
+  color: #B18147;
 }
-.news-container > li > .circle {
+.news-container1 > li > .circle {
   width: 20%;
   height: 100%;
   float: left;
   position: relative;
 }
-.news-container > li > .circle > img {
+.news-container1 > li > .circle > img {
   position: absolute;
   top: 0;
   left: 0;
@@ -170,22 +170,22 @@ export default {
   width: 20px;
   height: 20px;
 }
-.news-container > li > .circle > i {
+.news-container1 > li > .circle > i {
   display: block;
   width: 1px;
   height: 100%;
   background: #707070;
 }
-.news-container > li:nth-of-type(2n) > .content {
+.news-container1 > li:nth-of-type(2n) > .content {
   float: right;
 }
-.news-container > li:nth-of-type(2n) > .time {
+.news-container1 > li:nth-of-type(2n) > .time {
   float: right;
 }
-.news-container > li:nth-of-type(2n) > .circle {
+.news-container1 > li:nth-of-type(2n) > .circle {
   float: right;
 }
-.news-container > li:nth-of-type(1) > .circle > i {
+.news-container1 > li:nth-of-type(1) > .circle > i {
   height: 50%;
   position: absolute;
   top: 50%;
@@ -199,20 +199,20 @@ export default {
   cursor: pointer;
 }
 @media screen and (max-width: 767px) {
-  .news-container > li {
+  .news-container1 > li {
     width: 100%;
   }
-  .news-container > li > .content {
+  .news-container1 > li > .content {
     width: 70%;
     text-align: left;
     float: right;
   }
-  .news-container > li > .time {
+  .news-container1 > li > .time {
     width: 30%;
     text-align: left;
     float: right;
   }
-  .news-container > li > .circle {
+  .news-container1 > li > .circle {
     display: none;
   }
 }
