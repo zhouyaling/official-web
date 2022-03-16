@@ -9,7 +9,7 @@
             <div class="swiper-lazy-preloader"></div>
             <div class="swiper-slide-title">
               <h1>{{item.title}}</h1>
-              <p>{{item.content}}</p>
+              <!-- <p>{{item.content}}</p> -->
             </div>
           </div>
         </div>
@@ -21,30 +21,83 @@
         <div class="swiper-button-next yl-swiper-next"></div>
       </div>
     </div>
-    <!-- 大数据管理系统 -->
-    <div id="bigData" class="container-fuild">
-      <div class="row bigData-container">
-        <div class="col-xs-12 col-sm-12 col-md-6 wow zoomIn">
-          <img class="img-responsive" src="@/assets/img/img1.png" alt="大数据管理系统">
+
+    <!-- 第二部分 主营业务-->
+    <div id="whyChooseUs" class="conatiner-fuild">
+      <div class="container">
+        <div class="whyChooseUs-title text-center">
+          <p>主营业务</p>
+          <p>—— WE ARE MOST PROUD OF, IT IS HAS BEEN “FOCUS”——</p>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-6">
-          <h2 class="bigData-title">
-            大数据管理系统
-            <small>/ Big Data Management System</small>
-          </h2>
-          <p>当今最领先的响应式自助建站平台。无论您是普通互联网用户，还是专业网站制作人员，都能使用起飞页设计出最具专业水准的网站。想创建一个简单的单页式站点，还是一个专业的公司网站，亦或是一个别具一格的博客？起飞页可以满足您的所有需求。</p>
-          <p>我们的流线式网页布局设计方案和可视化图文内容编辑模式让网站制作和维护成为一件轻松惬意的事。无论您是普通互联网用户，还是专业网站制作人员。</p>
-          <h2 class="bigData-device">PC/PAD/Phone &nbsp; 全设备支持</h2>
-          <a href="#" class="btn btn-lg btn-block btn-info">联系我们</a>
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-3 server-wrapper" v-for="(item,index) in serverList" :key="index">
+            <div class="server-block wow slideInUp" style="height:332px;background:#ffffff;" onmouseenter="this.style.color='#B18147';this.style.borderColor='#B18147'" onmouseleave="this.style.color='#B18147';this.style.borderColor='#B18147'">
+              <img class="center-block" :src="item.logo" alt="logo">
+              <p class="text-center">{{item.title}}</p>
+              <div class="text-center" v-html="item.content" onmouseenter="this.style.color='#B18147'" onmouseleave="this.style.color='#666666'"></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <!-- 您身边的IT专家 -->
+    <!-- 第三部分 公司优势-->
+    <div id="bigData" class="container-fuild">
+      <div class="whyChooseUs-title text-center">
+        <p class="">公司优势</p>
+        <p>—— WE ARE MOST PROUD OF, IT IS HAS BEEN “FOCUS”——</p>
+      </div>
+      <div class="row bigData-container">
+        <div class="col-xs-12 col-sm-12 col-md-4 tip-group">
+          <div class="tip-item">
+            <div class="tip-img">
+              <img src="@/assets/img/icon1.png" alt="">
+            </div>
+            <div class="tip-text">
+              <div class="tip-title">服务流程快</div>
+              <div class="tip-subtitle">服务流程快服务流程快服务服务流程快服务流程快服务流程快流程快</div>
+            </div>
+          </div>
+          <div class="tip-item">
+            <div class="tip-img">
+              <img src="@/assets/img/icon1.png" alt="">
+            </div>
+            <div class="tip-text">
+              <div class="tip-title">服务流程快</div>
+              <div class="tip-subtitle">服务流程快服务流程快服务服务流程快服务流程快服务流程快流程快</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-4 wow zoomIn">
+          <img class="img-responsive" style="height:350px;margin:0 auto" src="@/assets/img/bg2.png" alt="">
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-4 tip-group">
+          <div class="tip-item">
+            <div class="tip-img">
+              <img src="@/assets/img/icon1.png" alt="">
+            </div>
+            <div class="tip-text">
+              <div class="tip-title">服务流程快</div>
+              <div class="tip-subtitle">服务流程快服务流程快服务服务流程快服务流程快服务流程快流程快</div>
+            </div>
+          </div>
+          <div class="tip-item">
+            <div class="tip-img">
+              <img src="@/assets/img/icon1.png" alt="">
+            </div>
+            <div class="tip-text">
+              <div class="tip-title">服务流程快</div>
+              <div class="tip-subtitle">服务流程快服务流程快服务服务流程快服务流程快服务流程快流程快</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 第四部分  愿景-->
     <div id="contactUs" class="container-fuild text-center">
       <div class="container contactUs-container wow slideInUp">
-        <h1>我们引以为豪的，是一直以来的“专注”</h1>
-        <h3>—— WE ARE MOST PROUD OF, IT IS HAS BEEN “FOCUS”——</h3>
-        <button class="btn btn-default btn-sm" onmouseleave="this.style.borderColor='#ffffff'; this.style.backgroundColor='#ffffff'; this.style.color='#3f3f3f';" onmouseenter="this.style.backgroundColor='transparent'; this.style.borderColor='#ffffff'; this.style.color='#ffffff';">联系我们</button>
+        <h1>发展成为服务于全国的大型综合性人力资源服务企业</h1>
+        <h3>—— Comprehensive human resource service enterprise ——</h3>
+        <a href="#" class="btn btn-lg btn-block btn-info" style="background:#B18147;border:none;width:24%;margin:0 auto">联系我们</a>
         <div class="contactUs-contactWay">
           <span></span>
           <span></span>
@@ -52,10 +105,13 @@
         </div>
       </div>
     </div>
-    <!-- 客户评价 -->
+    <!-- 第五部分 优秀猎头-->
     <div id="customer" class="container-fuild">
+      <div class="customer-title text-center">
+        <p>优秀猎头</p>
+        <p>—— WE ARE MOST PROUD OF, IT IS HAS BEEN “FOCUS”——</p>
+      </div>
       <div class="container customer-container">
-        <p class="customer-title text-center">优秀猎头</p>
         <div class="swiper-container customer-swiper hidden-xs">
           <div class="swiper-wrapper">
             <div class="swiper-slide customer-block" v-for="(item,index) in customerList" :key="index">
@@ -63,20 +119,17 @@
                 <img class="center-block" :src="item.logo" alt="logo">
               </div>
               <div class="customer-yh">
-                <!-- <img src="@/assets/img/yinhao.png" alt="引号"> -->
               </div>
               <div class="customer-content-name">
-                <p>谭XUEHAO 高级人力资源师</p>
+                <p>XueHao 高级人力资源师</p>
               </div>
               <div class="customer-content1">
-                <p>人力资源协会执行会长、女企业家协
+                <p>人力资源协会执行会长、企业家协
                   会执行会长。曾任上市集团人力资源
                   总监、投资发展总监</p>
               </div>
-              <!-- <div class="customer-content2">{{item.title}}</div> -->
             </div>
           </div>
-          <!-- 如果需要导航按钮 -->
           <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
         </div>
@@ -88,8 +141,8 @@
             <div class="customer-yh">
               <img src="@/assets/img/yinhao.png" alt="引号">
             </div>
-            <div class="customer-content1">
-              <small>{{item.content}}</small>
+            <div class="customer-content-name">
+              <p>XueHao 高级人力资源师</p>
             </div>
             <div class="customer-content2">
               <small>{{item.title}}</small>
@@ -98,26 +151,29 @@
         </div>
       </div>
     </div>
-    <!-- 为什么选择我们 -->
-    <div id="whyChooseUs" class="conatiner-fuild">
-      <div class="container">
-        <div class="whyChooseUs-title text-center">
-          <p>我们引以为豪的，是一直以来的“专注”</p>
-          <p>—— WE ARE MOST PROUD OF, IT IS HAS BEEN “FOCUS”——</p>
-        </div>
-        <div class="row">
-          <div class="col-xs-12 col-sm-6 col-md-3 server-wrapper" v-for="(item,index) in serverList" :key="index">
-            <div class="server-block wow slideInUp" onmouseenter="this.style.color='#B18147';this.style.borderColor='#B18147'" onmouseleave="this.style.color='#666';this.style.borderColor='#ccc'">
-              <img class="center-block" :src="item.logo" alt="logo">
-              <p class="text-center">{{item.title}}</p>
-              <div class="text-center" v-html="item.content" onmouseenter="this.style.color='#B18147'" onmouseleave="this.style.color='#666666'"></div>
-            </div>
-          </div>
-        </div>
+
+    <!-- 第七部分 我们的成绩-->
+    <div id="ourSuccess">
+      <div class="success-item">
+        <div>1,000 <i>+</i></div>
+        <div>高级猎头顾问</div>
+      </div>
+      <div class="success-item">
+        <div>60,000 <i>+</i></div>
+        <div>精英人才库</div>
+      </div>
+      <div class="success-item">
+        <div>10,238</div>
+        <div>服务客户</div>
+      </div>
+      <div class="success-item">
+        <div>9,016</div>
+        <div>职位案例</div>
       </div>
     </div>
-    <!-- 为什么选择我们--new -->
-    <div id="whyChooseUs" class="conatiner-fuild">
+
+    <!-- 第六部分 我们的服务 -->
+    <div id="whyChooseUs" class="other conatiner-fuild">
       <div class="container">
         <div class="whyChooseUs-title text-center">
           <p>我们引以为豪的，是一直以来的“专注”</p>
@@ -133,6 +189,7 @@
         </div>
       </div>
     </div>
+
   </div>
 </template>
 <script>
@@ -147,25 +204,25 @@ export default {
           img: require("@/assets/img/banner1.png"),
           path: "",
           title: '优化个人职业生涯，助力企业健康发展',
-          content: '宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介',
+          content: '',
         },
         {
           img: require("@/assets/img/banner2.jpg"),
           path: "",
           title: '优化个人职业生涯，助力企业健康发展',
-          content: '宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介',
+          content: '',
         },
         {
           img: require("@/assets/img/banner1.png"),
           path: "",
           title: '优化个人职业生涯，助力企业健康发展',
-          content: '宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介',
+          content: '',
         },
         {
           img: require("@/assets/img/banner2.jpg"),
           path: "",
           title: '优化个人职业生涯，助力企业健康发展',
-          content: '宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介',
+          content: '',
         }
       ],
       customerList: [
@@ -173,100 +230,58 @@ export default {
           logo: require("@/assets/img/img15.png"),
           title:
             "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
-          content:
-            "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。"
+
         },
         {
           logo: require("@/assets/img/img15.png"),
           title:
             "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
-          content:
-            "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。"
+
         },
         {
           logo: require("@/assets/img/img15.png"),
           title:
             "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
-          content:
-            "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。"
+
         },
         {
           logo: require("@/assets/img/img15.png"),
           title:
             "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
-          content:
-            "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。"
+
         },
         {
           logo: require("@/assets/img/img15.png"),
           title:
             "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
-          content:
-            "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。"
+
         },
         {
           logo: require("@/assets/img/img15.png"),
           title:
             "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
-          content:
-            "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。"
         },
-        {
-          logo: require("@/assets/img/img15.png"),
-          title:
-            "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
-          content:
-            "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。"
-        },
-        {
-          logo: require("@/assets/img/img15.png"),
-          title:
-            "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
-          content:
-            "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。"
-        },
-        {
-          logo: require("@/assets/img/img15.png"),
-          title:
-            "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
-          content:
-            "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。"
-        },
-        {
-          logo: require("@/assets/img/img15.png"),
-          title:
-            "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
-          content:
-            "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。"
-        },
-        {
-          logo: require("@/assets/img/img15.png"),
-          title:
-            "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
-          content:
-            "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。"
-        }
       ],
       serverList: [
         {
           logo: require("@/assets/img/tel.png"),
-          title: "初创企业",
-          content: "<p>全民创业，万众创新，在猎头的全方位人力资源支持下走得更远。"
+          title: "蓝领用工服务",
+          content: "<p>为企业提供蓝领用工整体解决方案"
         },
         {
           logo: require("@/assets/img/computer.png"),
-          title: "签约多家客户",
-          content: "<p>专注整合本土人才资源，简历库中包含百万份本土中高端人才简历。"
+          title: "猎头服务",
+          content: "<p>为企业提供中高端人才招聘解决方案"
         },
         {
           logo: require("@/assets/img/qq.png"),
-          title: "民营企业",
-          content: "<p>迅猛发展的民营企业占客户的xxx%以上，xxx%的他们选择再次合作"
+          title: "人事岗位外包服务",
+          content: "<p>3、为企业提供专业人资模块解决方案"
         },
         {
           logo: require("@/assets/img/skill.png"),
-          title: "7天招聘季",
-          content: "<p>360º寻访，精准推荐，专业测评和背调，可实现平均xxx天人选上岗"
+          title: "职业咨询服务",
+          content: "<p>为个人提供职业咨询、规划服务"
         }
       ],
       serverList1: [
@@ -300,7 +315,7 @@ export default {
       effect: 'fade',
       //自动播放
       autoplay: {
-        delay: 30000,
+        delay: 3000,
         stopOnLastSlide: false,
         disableOnInteraction: false
       },
@@ -327,7 +342,7 @@ export default {
       slidesPerView: 3,
       //自动播放
       autoplay: {
-        delay: 30000,
+        delay: 3000,
         stopOnLastSlide: false,
         disableOnInteraction: false
       },
@@ -385,8 +400,8 @@ export default {
   line-height: 80px;
 }
 #swiper .banner-swiper .swiper-slide-title > h1 {
-  font-size: 50px;
-  margin-top: 12%;
+  font-size: 40px;
+  margin-top: 18%;
 }
 #swiper .banner-swiper .swiper-slide-title > p {
   font-size: 20px;
@@ -395,10 +410,19 @@ export default {
 }
 /* 大数据管理系统 */
 #bigData {
-  padding: 100px;
+  padding: 100px 100px 100px 100px;
   transition: all ease 0.6s;
   box-sizing: border-box;
 }
+#bigData .whyChooseUs-title {
+  margin-bottom: 50px;
+}
+#bigData .whyChooseUs-title p:nth-of-type(1) {
+  font-size: 25px;
+  font-weight: 500;
+  color: #b18147;
+}
+
 #bigData .bigData-title {
   padding-bottom: 10px;
   border-bottom: 1px solid #ccc;
@@ -454,11 +478,21 @@ export default {
   background: #efefef;
   transition: all ease 0.6s;
 }
+
 #customer .customer-title {
-  font-size: 30px;
-  color: #B18147;
-  margin: 0 0 30px;
+  margin-bottom: 50px;
 }
+#customer .customer-title p:nth-of-type(1) {
+  font-size: 25px;
+  font-weight: 500;
+  color: #b18147;
+}
+
+/* #customer .customer-title {
+  font-size: 25px;
+  color: #b18147;
+  margin: 0 0 30px;
+} */
 #customer .customer-block {
   background: #fff;
   padding: 40px 30px 30px 30px;
@@ -468,11 +502,15 @@ export default {
   height: 200px;
   /* border: 1px solid #ccc; */
 }
+#customer .customer-yh {
+  padding-left: 10%;
+  box-sizing: border-box;
+}
 #customer .customer-yh img {
   width: 34px;
   height: 34px;
 }
-#customer .customer-content-name{
+#customer .customer-content-name {
   font-size: 20px;
   color: rgb(33, 33, 33);
   text-align: center;
@@ -488,10 +526,15 @@ export default {
 }
 #customer .customer-content2 {
   padding-top: 20px;
+  padding: 0 10%;
 }
 /* 为什么选择我们 */
 #whyChooseUs {
   padding: 100px;
+  background: url("../assets/img/bg1.png") no-repeat center;
+}
+#whyChooseUs.other {
+  background: url("../assets/img/bg3.png") no-repeat center !important;
 }
 #whyChooseUs .whyChooseUs-title {
   margin-bottom: 50px;
@@ -499,19 +542,19 @@ export default {
 #whyChooseUs .whyChooseUs-title p:nth-of-type(1) {
   font-size: 25px;
   font-weight: 500;
-  color: #B18147;
+  color: #b18147;
 }
 #whyChooseUs .whyChooseUs-title p:nth-of-type(2) {
   font-size: 14px;
 }
 #whyChooseUs .server-block {
   padding: 70px 20px;
-  border: 1px solid #ccc;
-  border-bottom: 5px solid #ccc;
+  border: 1px solid #b18147;
+  border-bottom: 5px solid #b18147;
 }
 #whyChooseUs .server-block img {
-  width: 48px;
-  height: 48px;
+  width: 60px;
+  height: 60px;
 }
 #whyChooseUs .server-block > p {
   font-size: 20px;
@@ -569,11 +612,11 @@ export default {
     font-weight: bold;
   }
   #customer .customer-logo img {
-    width: 48px;
-    height: 48px;
+    width: 55%;
+    height: auto;
   }
   #customer .customer-block {
-    padding: 30px;
+    padding: 30px 0;
   }
   #customer .customer-block > div {
     padding: 30px 0;
@@ -604,6 +647,10 @@ export default {
   }
   #whyChooseUs .server-block > div {
     color: #ccc;
+  }
+    #swiper .banner-swiper .swiper-slide-title > h1{
+    font-size: 20px;
+    margin-top: 22%;
   }
 }
 
@@ -651,6 +698,7 @@ export default {
   #whyChooseUs {
     padding: 20px 0;
   }
+
 }
 
 .yl-card-text {
@@ -682,10 +730,78 @@ export default {
 .yl-img-box img {
   margin: 0 auto;
 }
+
+.visible-xs > div:nth-of-type(odd) {
+  background: #f8f9f9;
+}
+
+.tip-group {
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.tip-item {
+  display: flex;
+  /* margin: 100px 0; */
+}
+
+.tip-img {
+  margin-right: 20px;
+}
+
+.tip-img img {
+  width: 50px;
+}
+
+.tip-title {
+  font-size: 17px;
+  color: #333333;
+  margin-bottom: 5px;
+}
+.tip-subtitle {
+  font-size: 13px;
+  color: #888888;
+  max-width: 250px;
+  line-height: 22px;
+}
+
+#ourSuccess {
+  width: 100%;
+  height: 160px;
+  /* background: #bba574; */
+  background: rgb(177, 129, 71);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#ourSuccess .success-item {
+  width: 18%;
+  color: #ffffff;
+  text-align: center;
+}
+#ourSuccess .success-item > div:nth-of-type(1) {
+  font-size: 36px;
+}
+#ourSuccess .success-item > div:nth-of-type(1) i {
+  font-size: 18px;
+  font-style: normal;
+}
+#ourSuccess .success-item > div:nth-of-type(2) {
+  font-size: 12px;
+}
 </style>
 <style>
 .swiper-pagination-bullet-active {
-  background: #888888 !important;
+  background: #666666 !important;
+}
+.swiper-button-next{
+  background-image: url('../assets/img/next.png');
+}
+.swiper-button-prev{
+  background-image: url('../assets/img/prev.png');
 }
 </style>
 

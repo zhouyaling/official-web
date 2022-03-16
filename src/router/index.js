@@ -3,6 +3,7 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 export default new Router({
+  // mode: 'history',  //去掉url中的#
   routes: [
     {
       path: '*',
@@ -58,7 +59,7 @@ export default new Router({
           name: 'service',
           component: resolve => require(['@/view/Service'], resolve),
           meta: {
-            title: '相关服务'
+            title: '猎头服务'
           }
         }, {
           path: '/newsinformation',
@@ -74,14 +75,16 @@ export default new Router({
           meta: {
             title: '公司介绍'
           }
-        }, {
-          path: '/jobchance',
-          name: 'jobchance',
-          component: resolve => require(['@/view/JobChance'], resolve),
-          meta: {
-            title: '工作机会'
-          }
-        }, {
+        }, 
+        // {
+        //   path: '/jobchance',
+        //   name: 'jobchance',
+        //   component: resolve => require(['@/view/JobChance'], resolve),
+        //   meta: {
+        //     title: '工作机会'
+        //   }
+        // }, 
+        {
           path: '/contactus',
           name: 'contactus',
           component: resolve => require(['@/view/ContactUs'], resolve),

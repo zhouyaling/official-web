@@ -1,33 +1,15 @@
 <template>
   <div id="NewsInformation">
     <div class="container container1">
-      <div class="container1 text-center">
+      <!-- <div class="container1 text-center">
         <h3>服务流程</h3>
         <p style="color:#b2b2b2">Company News</p>
-      </div>
-      <!-- <div class="nav container1 text-center">
+      </div> -->
+      <div class="nav container1 text-center">
                 <a href="#" class="active">公司新闻</a>
                 <a href="#">行业动态</a>
-            </div> -->
-      <ul class="news-container1 container1-fuild">
-        <li v-for="(item,index) in newsList" :key="index" class="wow fadeIn">
-          <div class="content">
-            <p>{{item.title}}</p>
-            <p>{{item.introduce}}</p>
-          </div>
-          <div class="time">
-            <p>{{item.date}}</p>
-            <span>ASSESSMENT</span>
-          </div>
-          <div class="circle">
-            <img src="../assets/img/circle.png">
-            <i class="line center-block"></i>
-          </div>
-        </li>
-      </ul>
-      <div class="contaianer-fuild text-center more">
-        <i class="glyphicon glyphicon-th"></i>
-      </div>
+            </div>
+            <div style="margin:100px;text-align:center">正在开发建设中...</div>
     </div>
   </div>
 </template>
@@ -37,45 +19,7 @@ export default {
   name: 'NewsInformation',
   data() {
     return {
-      newsList: [
-        {
-          id: '001',
-          title: '评估企业特点和职位需求',
-          introduce: '详细了解客户的企业文化、公司背景、行业和产品特点，与客户进行充分、有效沟通，并与客户共同对所需招聘的岗位进行讨论和分析。',
-          date: '01.',
-          year: '2019'
-        }, {
-          id: '002',
-          title: '评估企业特点和职位需求',
-          introduce: '详细了解客户的企业文化、公司背景、行业和产品特点，与客户进行充分、有效沟通，并与客户共同对所需招聘的岗位进行讨论和分析。',
-          date: '02.',
-          year: '2019'
-        }, {
-          id: '003',
-          title: '评估企业特点和职位需求',
-          introduce: '详细了解客户的企业文化、公司背景、行业和产品特点，与客户进行充分、有效沟通，并与客户共同对所需招聘的岗位进行讨论和分析。',
-          date: '03.',
-          year: '2019'
-        }, {
-          id: '004',
-          title: '评估企业特点和职位需求',
-          introduce: '详细了解客户的企业文化、公司背景、行业和产品特点，与客户进行充分、有效沟通，并与客户共同对所需招聘的岗位进行讨论和分析。',
-          date: '04.',
-          year: '2019'
-        }, {
-          id: '005',
-          title: '评估企业特点和职位需求',
-          introduce: '详细了解客户的企业文化、公司背景、行业和产品特点，与客户进行充分、有效沟通，并与客户共同对所需招聘的岗位进行讨论和分析。',
-          date: '05.',
-          year: '2019'
-        }, {
-          id: '006',
-          title: '评估企业特点和职位需求',
-          introduce: '详细了解客户的企业文化、公司背景、行业和产品特点，与客户进行充分、有效沟通，并与客户共同对所需招聘的岗位进行讨论和分析。',
-          date: '06.',
-          year: '2019'
-        }
-      ]
+     
     }
   },
   mounted() {

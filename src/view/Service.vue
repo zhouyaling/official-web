@@ -26,7 +26,7 @@
     <div class="container container1" style="margin-bottom:30px">
       <div class="container1 text-center">
         <h3>服务流程</h3>
-        <p style="color:#b2b2b2">Service Process</p>
+        <p style="color:#b2b2b2">Company News</p>
       </div>
       <!-- <div class="nav container1 text-center">
                 <a href="#" class="active">公司新闻</a>
@@ -87,42 +87,48 @@ export default {
           img: require('@/assets/img/service4.jpg')
         }
       ],
-      newsList: [
+      newsList:[
         {
           id: '001',
-          title: '评估企业特点和职位需求',
+          title: '签定合同',
           introduce: '详细了解客户的企业文化、公司背景、行业和产品特点，与客户进行充分、有效沟通，并与客户共同对所需招聘的岗位进行讨论和分析。',
           date: '01.',
           year: '2019'
         }, {
           id: '002',
-          title: '评估企业特点和职位需求',
+          title: '描述人物画像，成立项目组',
           introduce: '详细了解客户的企业文化、公司背景、行业和产品特点，与客户进行充分、有效沟通，并与客户共同对所需招聘的岗位进行讨论和分析。',
           date: '02.',
           year: '2019'
         }, {
           id: '003',
-          title: '评估企业特点和职位需求',
+          title: '人才寻访',
           introduce: '详细了解客户的企业文化、公司背景、行业和产品特点，与客户进行充分、有效沟通，并与客户共同对所需招聘的岗位进行讨论和分析。',
           date: '03.',
           year: '2019'
         }, {
           id: '004',
-          title: '评估企业特点和职位需求',
+          title: '编写推荐报告',
           introduce: '详细了解客户的企业文化、公司背景、行业和产品特点，与客户进行充分、有效沟通，并与客户共同对所需招聘的岗位进行讨论和分析。',
           date: '04.',
           year: '2019'
         }, {
           id: '005',
-          title: '评估企业特点和职位需求',
+          title: '面试安排及面试辅导',
           introduce: '详细了解客户的企业文化、公司背景、行业和产品特点，与客户进行充分、有效沟通，并与客户共同对所需招聘的岗位进行讨论和分析。',
           date: '05.',
           year: '2019'
         }, {
           id: '006',
-          title: '评估企业特点和职位需求',
+          title: '背景调查',
           introduce: '详细了解客户的企业文化、公司背景、行业和产品特点，与客户进行充分、有效沟通，并与客户共同对所需招聘的岗位进行讨论和分析。',
           date: '06.',
+          year: '2019'
+        }, {
+          id: '007',
+          title: '入职辅导',
+          introduce: '详细了解客户的企业文化、公司背景、行业和产品特点，与客户进行充分、有效沟通，并与客户共同对所需招聘的岗位进行讨论和分析。',
+          date: '07.',
           year: '2019'
         }
       ]

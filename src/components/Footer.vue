@@ -5,16 +5,16 @@
        <!-- <img style="height:60px;width:auto;" src="@/assets/img/logo-text.png" alt="logo图"> -->
     </div>
     <!-- #6A3906 #B18147-->
-    <p class="title" style="color:#B18147;padding-top:20px">森舟猎头 — 不辜负每一份寄托！</p>
+    <p class="title" style="color:#B18147;padding-top:20px">森舟猎头 — 服务于全国的大型综合性人力资源服务企业！</p>
     <p class="address_tel_fax">
       <span>地址：重庆高新区虎溪街道景阳路26号15幢10-10、10-11、10-12</span>
-      <span>Tel：15178726577</span>
+      
     </p>
     <p class="email_wx">
       <span>邮箱：675209079@qq.com</span>
     </p>
      <p class="email_wx">
-      <span>公司微信号：XXX</span>
+      <span>Tel：15178726577</span>
     </p>
     <p class="copy">Copyright &copy; 2022 - 2023 重庆森舟企业管理咨询有限公司</p>
   </div>

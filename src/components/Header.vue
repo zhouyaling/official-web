@@ -18,7 +18,7 @@
     <!-- 电脑导航 -->
     <div class="header-nav container hidden-xs">
       <!-- 导航logo -->
-      <div class="header-nav-logo">
+      <div class="header-nav-logo" @click="goHome">
         <img style="height:80px" src="@/assets/img/logo_black.png">
         <img style="height:56px;left:110px;" src="@/assets/img/logo-text.png">
       </div>
@@ -91,7 +91,7 @@ export default {
         //   ]
         // },
         {
-          name: "相关服务",
+          name: "猎头服务",
           path: "/service",
           children: []
         },
@@ -105,11 +105,11 @@ export default {
           path: "/companyintroduction",
           children: []
         },
-        {
-          name: "工作机会",
-          path: "/jobchance",
-          children: []
-        },
+        // {
+        //   name: "工作机会",
+        //   path: "/jobchance",
+        //   children: []
+        // },
         {
           name: "联系我们",
           path: "/contactus",
@@ -119,6 +119,9 @@ export default {
     };
   },
   methods: {
+    goHome(){
+      this.$router.push('/home')
+    },
     navClick(index, name) {
       this.navIndex = index;
       sessionStorage.setItem('navIndex', index)
@@ -145,7 +148,7 @@ export default {
   color: #fff;
   font-size: 12px;
   line-height: 50px;
-  background: #B18147;
+  background: #b18147;
   display: none;
 }
 /* 顶部的图标 */
@@ -166,7 +169,7 @@ export default {
 /* 导航栏logo图片 */
 #header .header-nav .header-nav-logo img {
   width: auto;
-  height:90px;
+  height: 90px;
   position: absolute;
   top: 0;
   left: 0;
@@ -209,7 +212,7 @@ export default {
   height: 2px;
   opacity: 0;
   transition: all 0.6s ease;
-  background-color: #B18147;
+  background-color: #b18147;
 }
 /* 导航栏 每个导航下面的 a 链接的右侧小三角 */
 #header .header-nav .header-nav-wrapper > li > a > span {
@@ -218,7 +221,7 @@ export default {
 }
 /* 导航栏 每个导航下面的 a 链接 鼠标滑上去的样式 */
 #header .header-nav .header-nav-wrapper > li > a:hover {
-  color: #B18147;
+  color: #b18147;
   text-decoration: none;
 }
 /* 导航栏 每个导航下面的 a 链接 鼠标滑上去下划线的样式 */
@@ -233,9 +236,9 @@ export default {
 }
 /* 导航栏 每个导航下面的 a 链接 鼠标点击后的样式 */
 #header .header-nav .header-nav-wrapper > li.active > a {
-  color: #B18147;
+  color: #b18147;
   text-decoration: none;
-  border-bottom: 2px solid #B18147;
+  border-bottom: 2px solid #b18147;
   font-weight: 600;
 }
 /* 导航栏 每个导航下面的二级导航容器 */
@@ -277,9 +280,19 @@ export default {
     position: relative;
   }
   /* 导航栏logo图片 */
-  #header .header-nav-m .header-nav-m-logo img {
-    width: 95px;
-    height: 45px;
+  #header .header-nav-m .header-nav-m-logo > img:nth-of-type(1) {
+    width: 80px;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  #header .header-nav-m .header-nav-m-logo > img:nth-of-type(2) {
+    width: auto;
+    height: 60px;
     position: absolute;
     top: 0;
     left: 0;
@@ -293,7 +306,7 @@ export default {
     height: 50px;
     font-size: 20px;
     line-height: 50px;
-    background: #B18147;
+    background: #b18147;
     position: relative;
   }
   /* 导航栏 菜单图标 */
@@ -314,7 +327,7 @@ export default {
     top: 50px;
     left: 0;
     width: 100%;
-    background: #B18147;
+    background: #b18147;
     z-index: 9999999;
   }
   /* 导航栏 每个导航 */
