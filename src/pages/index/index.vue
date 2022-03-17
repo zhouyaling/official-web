@@ -1,201 +1,204 @@
 <template>
-  <div id="HomePage">
-    <!-- 轮播图 -->
-    <div id="swiper" class="container-fuild">
-      <div class="swiper-container banner-swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide" v-for="(item,index) in swiperList" :key="index">
-            <img class="swiper-lazy" :data-src="item.img" alt="轮播图">
-            <div class="swiper-lazy-preloader"></div>
-            <div class="swiper-slide-title">
-              <h1>{{item.title}}</h1>
+  <page-layout>
+    <div slot="page" id="HomePage">
+      <!-- 轮播图 -->
+      <div id="swiper" class="container-fuild">
+        <div class="swiper-container banner-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" v-for="(item,index) in swiperList" :key="index">
+              <img class="swiper-lazy" :data-src="item.img" alt="轮播图">
+              <div class="swiper-lazy-preloader"></div>
+              <div class="swiper-slide-title">
+                <h1>{{item.title}}</h1>
+              </div>
+            </div>
+          </div>
+          <!-- 如果需要分页器 -->
+          <div class="swiper-pagination"></div>
+
+          <!-- 如果需要导航按钮 -->
+          <div class="swiper-button-prev yl-swiper-prev"></div>
+          <div class="swiper-button-next yl-swiper-next"></div>
+        </div>
+      </div>
+
+      <!-- 第二部分 主营业务-->
+      <div id="whyChooseUs" class="conatiner-fuild">
+        <div class="container">
+          <div class="whyChooseUs-title text-center">
+            <p>主营业务</p>
+            <p>—— WE ARE MOST PROUD OF, IT IS HAS BEEN “FOCUS”——</p>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-3 server-wrapper" v-for="(item,index) in serverList" :key="index">
+              <div class="server-block wow slideInUp" style="height:332px;background:#ffffff;" onmouseenter="this.style.color='#B18147';this.style.borderColor='#B18147'" onmouseleave="this.style.color='#B18147';this.style.borderColor='#B18147'">
+                <img class="center-block" :src="item.logo" alt="logo">
+                <p class="text-center">{{item.title}}</p>
+                <div class="text-center" v-html="item.content" onmouseenter="this.style.color='#B18147'" onmouseleave="this.style.color='#666666'"></div>
+              </div>
             </div>
           </div>
         </div>
-        <!-- 如果需要分页器 -->
-        <div class="swiper-pagination"></div>
-
-        <!-- 如果需要导航按钮 -->
-        <div class="swiper-button-prev yl-swiper-prev"></div>
-        <div class="swiper-button-next yl-swiper-next"></div>
       </div>
-    </div>
-
-    <!-- 第二部分 主营业务-->
-    <div id="whyChooseUs" class="conatiner-fuild">
-      <div class="container">
+      <!-- 第三部分 公司优势-->
+      <div id="bigData" class="container-fuild">
         <div class="whyChooseUs-title text-center">
-          <p>主营业务</p>
+          <p class="">公司优势</p>
           <p>—— WE ARE MOST PROUD OF, IT IS HAS BEEN “FOCUS”——</p>
         </div>
-        <div class="row">
-          <div class="col-xs-12 col-sm-6 col-md-3 server-wrapper" v-for="(item,index) in serverList" :key="index">
-            <div class="server-block wow slideInUp" style="height:332px;background:#ffffff;" onmouseenter="this.style.color='#B18147';this.style.borderColor='#B18147'" onmouseleave="this.style.color='#B18147';this.style.borderColor='#B18147'">
-              <img class="center-block" :src="item.logo" alt="logo">
-              <p class="text-center">{{item.title}}</p>
-              <div class="text-center" v-html="item.content" onmouseenter="this.style.color='#B18147'" onmouseleave="this.style.color='#666666'"></div>
+        <div class="row bigData-container">
+          <div class="col-xs-12 col-sm-12 col-md-4 tip-group">
+            <div class="tip-item">
+              <div class="tip-img">
+                <img src="@/assets/img/icon1.png" alt="">
+              </div>
+              <div class="tip-text">
+                <div class="tip-title">服务流程快</div>
+                <div class="tip-subtitle">服务流程快服务流程快服务服务流程快服务流程快服务流程快流程快</div>
+              </div>
+            </div>
+            <div class="tip-item">
+              <div class="tip-img">
+                <img src="@/assets/img/icon1.png" alt="">
+              </div>
+              <div class="tip-text">
+                <div class="tip-title">服务流程快</div>
+                <div class="tip-subtitle">服务流程快服务流程快服务服务流程快服务流程快服务流程快流程快</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-4 wow zoomIn">
+            <img class="img-responsive" style="height:350px;margin:0 auto" src="@/assets/img/bg2.png" alt="">
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-4 tip-group">
+            <div class="tip-item">
+              <div class="tip-img">
+                <img src="@/assets/img/icon1.png" alt="">
+              </div>
+              <div class="tip-text">
+                <div class="tip-title">服务流程快</div>
+                <div class="tip-subtitle">服务流程快服务流程快服务服务流程快服务流程快服务流程快流程快</div>
+              </div>
+            </div>
+            <div class="tip-item">
+              <div class="tip-img">
+                <img src="@/assets/img/icon1.png" alt="">
+              </div>
+              <div class="tip-text">
+                <div class="tip-title">服务流程快</div>
+                <div class="tip-subtitle">服务流程快服务流程快服务服务流程快服务流程快服务流程快流程快</div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- 第三部分 公司优势-->
-    <div id="bigData" class="container-fuild">
-      <div class="whyChooseUs-title text-center">
-        <p class="">公司优势</p>
-        <p>—— WE ARE MOST PROUD OF, IT IS HAS BEEN “FOCUS”——</p>
-      </div>
-      <div class="row bigData-container">
-        <div class="col-xs-12 col-sm-12 col-md-4 tip-group">
-          <div class="tip-item">
-            <div class="tip-img">
-              <img src="@/assets/img/icon1.png" alt="">
-            </div>
-            <div class="tip-text">
-              <div class="tip-title">服务流程快</div>
-              <div class="tip-subtitle">服务流程快服务流程快服务服务流程快服务流程快服务流程快流程快</div>
-            </div>
-          </div>
-          <div class="tip-item">
-            <div class="tip-img">
-              <img src="@/assets/img/icon1.png" alt="">
-            </div>
-            <div class="tip-text">
-              <div class="tip-title">服务流程快</div>
-              <div class="tip-subtitle">服务流程快服务流程快服务服务流程快服务流程快服务流程快流程快</div>
-            </div>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-4 wow zoomIn">
-          <img class="img-responsive" style="height:350px;margin:0 auto" src="@/assets/img/bg2.png" alt="">
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-4 tip-group">
-          <div class="tip-item">
-            <div class="tip-img">
-              <img src="@/assets/img/icon1.png" alt="">
-            </div>
-            <div class="tip-text">
-              <div class="tip-title">服务流程快</div>
-              <div class="tip-subtitle">服务流程快服务流程快服务服务流程快服务流程快服务流程快流程快</div>
-            </div>
-          </div>
-          <div class="tip-item">
-            <div class="tip-img">
-              <img src="@/assets/img/icon1.png" alt="">
-            </div>
-            <div class="tip-text">
-              <div class="tip-title">服务流程快</div>
-              <div class="tip-subtitle">服务流程快服务流程快服务服务流程快服务流程快服务流程快流程快</div>
-            </div>
+      <!-- 第四部分  愿景-->
+      <div id="contactUs" class="container-fuild text-center">
+        <div class="container contactUs-container wow slideInUp">
+          <h1>发展成为服务于全国的大型综合性人力资源服务企业</h1>
+          <h3>—— Comprehensive human resource service enterprise ——</h3>
+          <a href="#" class="btn btn-lg btn-block btn-info" style="background:#B18147;border:none;width:24%;margin:0 auto">联系我们</a>
+          <div class="contactUs-contactWay">
+            <span></span>
+            <span></span>
+            <span></span>
           </div>
         </div>
       </div>
-    </div>
-    <!-- 第四部分  愿景-->
-    <div id="contactUs" class="container-fuild text-center">
-      <div class="container contactUs-container wow slideInUp">
-        <h1>发展成为服务于全国的大型综合性人力资源服务企业</h1>
-        <h3>—— Comprehensive human resource service enterprise ——</h3>
-        <a href="#" class="btn btn-lg btn-block btn-info" style="background:#B18147;border:none;width:24%;margin:0 auto">联系我们</a>
-        <div class="contactUs-contactWay">
-          <span></span>
-          <span></span>
-          <span></span>
+      <!-- 第五部分 优秀猎头-->
+      <div id="customer" class="container-fuild">
+        <div class="customer-title text-center">
+          <p>优秀猎头</p>
+          <p>—— WE ARE MOST PROUD OF, IT IS HAS BEEN “FOCUS”——</p>
         </div>
-      </div>
-    </div>
-    <!-- 第五部分 优秀猎头-->
-    <div id="customer" class="container-fuild">
-      <div class="customer-title text-center">
-        <p>优秀猎头</p>
-        <p>—— WE ARE MOST PROUD OF, IT IS HAS BEEN “FOCUS”——</p>
-      </div>
-      <div class="container customer-container">
-        <div class="swiper-container customer-swiper hidden-xs">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide customer-block" v-for="(item,index) in customerList" :key="index">
+        <div class="container customer-container">
+          <div class="swiper-container customer-swiper hidden-xs">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide customer-block" v-for="(item,index) in customerList" :key="index">
+                <div class="customer-logo">
+                  <img class="center-block" :src="item.logo" alt="logo">
+                </div>
+                <div class="customer-yh">
+                </div>
+                <div class="customer-content-name">
+                  <p>XueHao 高级人力资源师</p>
+                </div>
+                <div class="customer-content1">
+                  <p>人力资源协会执行会长、企业家协
+                    会执行会长。曾任上市集团人力资源
+                    总监、投资发展总监</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+          <div class="row visible-xs customer-block">
+            <div class="col-xs-12" v-for="(item,index) in customerList" :key="index">
               <div class="customer-logo">
                 <img class="center-block" :src="item.logo" alt="logo">
               </div>
               <div class="customer-yh">
+                <img src="@/assets/img/yinhao.png" alt="引号">
               </div>
               <div class="customer-content-name">
                 <p>XueHao 高级人力资源师</p>
               </div>
-              <div class="customer-content1">
-                <p>人力资源协会执行会长、企业家协
-                  会执行会长。曾任上市集团人力资源
-                  总监、投资发展总监</p>
+              <div class="customer-content2">
+                <small>{{item.title}}</small>
               </div>
             </div>
           </div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
         </div>
-        <div class="row visible-xs customer-block">
-          <div class="col-xs-12" v-for="(item,index) in customerList" :key="index">
-            <div class="customer-logo">
-              <img class="center-block" :src="item.logo" alt="logo">
-            </div>
-            <div class="customer-yh">
-              <img src="@/assets/img/yinhao.png" alt="引号">
-            </div>
-            <div class="customer-content-name">
-              <p>XueHao 高级人力资源师</p>
-            </div>
-            <div class="customer-content2">
-              <small>{{item.title}}</small>
+      </div>
+
+      <!-- 第七部分 我们的成绩-->
+      <div id="ourSuccess">
+        <div class="success-item">
+          <div>1,000 <i>+</i></div>
+          <div>高级猎头顾问</div>
+        </div>
+        <div class="success-item">
+          <div>60,000 <i>+</i></div>
+          <div>精英人才库</div>
+        </div>
+        <div class="success-item">
+          <div>10,238</div>
+          <div>服务客户</div>
+        </div>
+        <div class="success-item">
+          <div>9,016</div>
+          <div>职位案例</div>
+        </div>
+      </div>
+
+      <!-- 第六部分 我们的服务 -->
+      <div id="whyChooseUs" class="other conatiner-fuild">
+        <div class="container">
+          <div class="whyChooseUs-title text-center">
+            <p>我们引以为豪的，是一直以来的“专注”</p>
+            <p class="yl-sub-title">—— WE ARE MOST PROUD OF, IT IS HAS BEEN “FOCUS”——</p>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-3 server-wrapper" v-for="(item,index) in serverList1" :key="index">
+              <div class="yl-img-box">
+                <img :src="item.logo" alt="">
+              </div>
+              <p class="yl-card-text">{{item.title}}</p>
             </div>
           </div>
         </div>
       </div>
     </div>
-
-    <!-- 第七部分 我们的成绩-->
-    <div id="ourSuccess">
-      <div class="success-item">
-        <div>1,000 <i>+</i></div>
-        <div>高级猎头顾问</div>
-      </div>
-      <div class="success-item">
-        <div>60,000 <i>+</i></div>
-        <div>精英人才库</div>
-      </div>
-      <div class="success-item">
-        <div>10,238</div>
-        <div>服务客户</div>
-      </div>
-      <div class="success-item">
-        <div>9,016</div>
-        <div>职位案例</div>
-      </div>
-    </div>
-
-    <!-- 第六部分 我们的服务 -->
-    <div id="whyChooseUs" class="other conatiner-fuild">
-      <div class="container">
-        <div class="whyChooseUs-title text-center">
-          <p>我们引以为豪的，是一直以来的“专注”</p>
-          <p class="yl-sub-title">—— WE ARE MOST PROUD OF, IT IS HAS BEEN “FOCUS”——</p>
-        </div>
-        <div class="row">
-          <div class="col-xs-12 col-sm-6 col-md-3 server-wrapper" v-for="(item,index) in serverList1" :key="index">
-            <div class="yl-img-box">
-              <img :src="item.logo" alt="">
-            </div>
-            <p class="yl-card-text">{{item.title}}</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
+  </page-layout>
 </template>
 <script>
+import pageLayout from '@/components/pageView.vue'
 import Swiper from "swiper";
 import { WOW } from 'wowjs';
 export default {
   name: "HomePage",
+  components: { pageLayout },
   data() {
     return {
       swiperList: [
@@ -439,7 +442,7 @@ export default {
 #contactUs {
   color: #fff;
   height: 400px;
-  background: url("../assets/img/contact_us_bg.jpg") 0 0 no-repeat;
+  background: url("../../assets/img/contact_us_bg.jpg") 0 0 no-repeat;
   background-size: 100% 100%;
   transition: all ease 0.6s;
 }
@@ -458,15 +461,15 @@ export default {
   margin: 30px;
 }
 #contactUs .contactUs-container .contactUs-contactWay span:nth-of-type(1) {
-  background: url("../assets/img/weixin.png") 0 0 no-repeat;
+  background: url("../../assets/img/weixin.png") 0 0 no-repeat;
   background-size: 100% 100%;
 }
 #contactUs .contactUs-container .contactUs-contactWay span:nth-of-type(2) {
-  background: url("../assets/img/weibo.png") 0 0 no-repeat;
+  background: url("../../assets/img/weibo.png") 0 0 no-repeat;
   background-size: 100% 100%;
 }
 #contactUs .contactUs-container .contactUs-contactWay span:nth-of-type(3) {
-  background: url("../assets/img/twitter.png") 0 0 no-repeat;
+  background: url("../../assets/img/twitter.png") 0 0 no-repeat;
   background-size: 100% 100%;
 }
 
@@ -530,10 +533,10 @@ export default {
 /* 为什么选择我们 */
 #whyChooseUs {
   padding: 100px;
-  background: url("../assets/img/bg1.png") no-repeat center;
+  background: url("../../assets/img/bg1.png") no-repeat center;
 }
 #whyChooseUs.other {
-  background: url("../assets/img/bg3.png") no-repeat center !important;
+  background: url("../../assets/img/bg3.png") no-repeat center !important;
 }
 #whyChooseUs .whyChooseUs-title {
   margin-bottom: 50px;
@@ -647,7 +650,7 @@ export default {
   #whyChooseUs .server-block > div {
     color: #ccc;
   }
-    #swiper .banner-swiper .swiper-slide-title > h1{
+  #swiper .banner-swiper .swiper-slide-title > h1 {
     font-size: 20px;
     margin-top: 22%;
   }
@@ -697,7 +700,6 @@ export default {
   #whyChooseUs {
     padding: 20px 0;
   }
-
 }
 
 .yl-card-text {
@@ -714,13 +716,13 @@ export default {
 }
 
 .yl-swiper-prev {
-  background-image: url("../assets/img/prev.png");
+  background-image: url("../../assets/img/prev.png");
   background-size: 27px 44px;
   background-position: center;
   background-repeat: no-repeat;
 }
 .yl-swiper-next {
-  background-image: url("../assets/img/next.png");
+  background-image: url("../../assets/img/next.png");
   background-size: 27px 44px;
   background-position: center;
   background-repeat: no-repeat;
@@ -796,11 +798,11 @@ export default {
 .swiper-pagination-bullet-active {
   background: #666666 !important;
 }
-.swiper-button-next{
-  background-image: url('../assets/img/next.png');
+.swiper-button-next {
+  background-image: url("../../assets/img/next.png");
 }
-.swiper-button-prev{
-  background-image: url('../assets/img/prev.png');
+.swiper-button-prev {
+  background-image: url("../../assets/img/prev.png");
 }
 </style>
 

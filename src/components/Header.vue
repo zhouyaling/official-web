@@ -18,23 +18,27 @@
     <!-- 电脑导航 -->
     <div class="header-nav container hidden-xs">
       <!-- 导航logo -->
-      <div class="header-nav-logo" @click="goHome">
-        <img style="height:80px" src="@/assets/img/logo_black.png">
-        <img style="height:56px;left:110px;" src="@/assets/img/logo-text.png">
+      <div class="header-nav-logo">
+        <a href="index.html">
+          <img style="height:80px" src="@/assets/img/logo_black.png">
+          <img style="height:56px;left:110px;" src="@/assets/img/logo-text.png">
+        </a>
       </div>
       <!-- 导航内容 -->
       <ul class="header-nav-wrapper">
         <li v-for="(item,index) in navList" :key="index" :class="index==navIndex?'active':''" @click="navClick(index,item.name)">
-          <router-link :to="item.path">
+          <!-- <router-link :to="item.path"> -->
+          <a :href="item.path" rel="noopener noreferrer">
             {{item.name}}
             <span v-if="item.children.length>0" class="glyphicon glyphicon-menu-down"></span>
             <i class="underline"></i>
-          </router-link>
-          <dl v-if="item.children.length>0">
+          </a>
+          <!-- </router-link> -->
+          <!-- <dl v-if="item.children.length>0">
             <dt v-for="(i,n) in item.children" :key="n">
               <router-link :to="i.path">{{i.name}}</router-link>
             </dt>
-          </dl>
+          </dl> -->
         </li>
       </ul>
     </div>
@@ -52,10 +56,10 @@
         <!-- 导航内容 -->
         <ul id="menu" class="header-nav-m-wrapper collapse">
           <li v-for="(item,index) in navList" :key="index" :class="index==navIndex?'active':''" @click="navClick(index,item.name)" data-toggle="collapse" data-target="#menu">
-            <router-link :to="item.path">
-              {{item.name}}
-              <i class="underline"></i>
-            </router-link>
+            <!-- <router-link :to="item.path"> -->
+            {{item.name}}
+            <i class="underline"></i>
+            <!-- </router-link> -->
           </li>
         </ul>
       </div>
@@ -73,53 +77,44 @@ export default {
       navList: [
         {
           name: "首页",
-          path: "/",
+          path: "index.html",
           children: []
         },
-        // {
-        //   name: "软件产品",
-        //   path: "/software",
-        //   children: [
-        //     {
-        //       name: "智能小镇管理系统",
-        //       path: "/software/smartTown"
-        //     },
-        //     {
-        //       name: "大数据管理系统",
-        //       path: "/software/bigData"
-        //     }
-        //   ]
-        // },
         {
           name: "猎头服务",
-          path: "/service",
+          path: "service.html",
           children: []
         },
         {
           name: "新闻动态",
-          path: "/newsinformation",
+          path: "news.html",
           children: []
         },
         {
           name: "公司介绍",
-          path: "/companyintroduction",
+          path: "aboutus.html",
           children: []
         },
-        // {
-        //   name: "工作机会",
-        //   path: "/jobchance",
-        //   children: []
-        // },
         {
           name: "联系我们",
-          path: "/contactus",
+          path: "contact.html",
           children: []
         }
       ]
     };
   },
   methods: {
-    goHome(){
+    getURL(url) {
+      strURL = url;
+      // let strURL = "";
+      // if (url.substr(0, 7).toLowerCase() == "http://" || url.substr(0, 8).toLowerCase() == "https://") {
+      //   strURL = url;
+      // } else {
+      //   strURL = "http://" + url;
+      // }
+      return strURL;
+    },
+    goHome() {
       this.$router.push('/home')
     },
     navClick(index, name) {

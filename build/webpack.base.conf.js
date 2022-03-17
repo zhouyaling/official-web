@@ -5,7 +5,7 @@ const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
 
-function resolve (dir) {
+function resolve(dir) {
   return path.join(__dirname, '..', dir)
 }
 
@@ -13,12 +13,16 @@ function resolve (dir) {
 
 module.exports = {
   context: path.resolve(__dirname, '../'),
-  entry: {
-    app: './src/main.js'
-  },
+  // entry: {
+  //   app: './src/main.js'
+  // },
+  // add by zhouyl 2022-03-17
+  /* 修改部分 ---------------- 开始 */
+  entry: utils.entries(),
+  /* 修改部分 ---------------- 结束 */
   externals: {
-    "BMap": "BMap" 
-  }, 
+    "BMap": "BMap"
+  },
   plugins: [
     new webpack.ProvidePlugin({
       $: "jquery",
