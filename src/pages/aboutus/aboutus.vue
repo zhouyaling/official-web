@@ -7,12 +7,26 @@
           <div class="col-xs-12 col-sm-12 col-md-6 wow zoomIn">
             <img class="img-responsive center-block" src="@/assets/img/about_img.png">
           </div>
-          <div class="col-xs-12 col-sm-12 col-md-5">
+          <div class="col-xs-12 col-sm-12 col-md-6">
             <h3 style="color:#333">重庆森舟企业管理咨询有限责任公司</h3>
             <p class=".text-justify">森舟猎头公司成立于2016年，位于重庆市沙坪坝大学城。从事线上中高端人才代理招聘服务，涵盖全国各省市，致力于为各行业客户挖掘推送优秀人才。目前已与国内大型互联网招聘平台猎聘、智联等达成战略合作。同时也提供蓝领招聘、职业咨询、人力资源外包等服务。公司平台稳定、正处于飞速发展期，团队氛围好期待你的加入！</p>
           </div>
         </div>
+        <div >
+          <div class="container customer-container our-news-box">
+            <div class="our-news-card" v-for="(item,index) in 8" :key="index">
+              <img :src="require(`../../assets/img/img2${index}.jpg`)" alt="">
+            </div>
+          </div>
+        </div>
       </div>
+      <!-- <div id="our-news" class="container-fuild">
+        <div class="container customer-container our-news-box">
+          <div class="our-news-card" v-for="(item,index) in 8" :key="index">
+            <img :src="require(`../../assets/img/img2${index}.jpg`)" alt="">
+          </div>
+        </div>
+      </div> -->
       <!-- 第五部分 优秀猎头-->
       <div id="customer" class="container-fuild">
         <div class="customer-title text-center">
@@ -152,13 +166,13 @@ export default {
   margin-left: 0;
 }
 .CompanyIntroduction-container {
-  padding: 100px 0;
+  padding: 100px 0 50px 0;
   color: #808080;
   transition: all ease 0.5s;
 }
 .CompanyIntroduction-container > div > p {
-  font-size: 14px;
-  line-height: 2.6rem;
+  font-size: 17px;
+  line-height: 3rem;
 }
 
 #customer {
@@ -216,6 +230,28 @@ export default {
 #customer .customer-content2 {
   padding-top: 20px;
   padding: 0 10%;
+}
+
+.our-news-box {
+}
+
+.our-news-card {
+  width: 24%;
+  min-width: 250px;
+  height: 220px;
+  transition: all 0.3s;
+  float: left;
+  margin: 5px 0.5%;
+  overflow: hidden;
+}
+
+.our-news-card:hover {
+  transform: scale3d(1.1, 1.1, 1);
+}
+
+.our-news-card img {
+  width: 100%;
+  height: 100%;
 }
 
 @media screen and (max-width: 997px) {

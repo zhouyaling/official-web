@@ -1,7 +1,7 @@
 <template>
   <page-layout>
     <div slot="page" id="Service">
-      <div class="container text-center">
+      <div class="container text-center color-orange">
         <h3>我们的服务</h3>
         <p style="color:#b2b2b2">The Best Service You Never See</p>
       </div>
@@ -25,7 +25,7 @@
       </div>
       <!-- 服务流程 -->
       <div class="container container1" style="margin-bottom:30px">
-        <div class="container1 text-center">
+        <div class="container1 text-center color-orange">
           <h3>服务流程</h3>
           <p style="color:#b2b2b2">Company News</p>
         </div>

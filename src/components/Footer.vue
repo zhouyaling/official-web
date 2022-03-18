@@ -16,7 +16,7 @@
      <p class="email_wx">
       <span>Tel：15178726577</span>
     </p>
-    <p class="copy">Copyright &copy; 2022 - 2023 重庆森舟企业管理咨询有限公司</p>
+    <p class="copy">Copyright &copy; 2022 重庆森舟企业管理咨询有限公司</p>
   </div>
 </template>
 <script>
