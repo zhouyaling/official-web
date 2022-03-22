@@ -24,7 +24,7 @@
             </div>
             <div class="news-item-content">
               <div class="news-title">Vue.js 是一个用于构建客户端应用的框架</div>
-              <div>默认情况下，Vue 组件在浏览器中生成和操作 DOM 作为输出。然而，我们也可以将相同的组件在服务端渲染成 HTML 字符串，直接返回给浏览器，最后再将静态的 HTML “激活” (hydrate) 为完全交互式的客户端应用。</div>
+              <div class="news-detail">默认情况下，Vue 组件在浏览器中生成和操作 DOM 作为输出。然而，我们也可以将相同的组件在服务端渲染成 HTML 字符串，直接返回给浏览器，最后再将静态的 HTML “激活” (hydrate) 为完全交互式的客户端应用。</div>
             </div>
             <div class="news-item-time">
               <span>18</span>
@@ -187,6 +187,7 @@ export default {
   position: relative;
   cursor: pointer;
   transition: all 0.4s;
+  overflow: hidden;
 }
 
 .news-item:hover {
@@ -221,9 +222,9 @@ export default {
   font-size: 13px;
   font-family: "微软雅黑";
   color: #666666;
-  /* overflow: hidden;
+  overflow: hidden;
   text-overflow: ellipsis;
-  white-space: pre-wrap; */
+  white-space: pre-wrap;
 }
 
 .news-item-content .news-title {
@@ -274,6 +275,7 @@ export default {
   border-radius: 2px;
   transition: all 0.3s;
   cursor: pointer;
+  overflow: hidden;
 }
 
 .news-top3 .news-card:hover{
@@ -325,6 +327,33 @@ export default {
   }
   .news-container1 > li > .circle {
     display: none;
+  }
+
+  .news-item{
+    height: 150px;
+  }
+  .news-item .news-item-img{
+    width: 100px;
+  }
+  .news-item .news-item-content{
+    width: calc(100% - 100px);
+  }
+  .news-item .news-detail{
+    display: none;
+  }
+  .news-item .news-item-time{
+    width: 60px;
+    height: 60px;
+    font-size: 12px;
+    right: 0px;
+  }
+
+  .news-top3{
+    flex-direction: column;
+  }
+  .news-top3 .news-card{
+    width: 82%;
+    margin-bottom: 30px;
   }
 }
 </style>

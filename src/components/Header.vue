@@ -57,8 +57,10 @@
         <ul id="menu" class="header-nav-m-wrapper collapse">
           <li v-for="(item,index) in navList" :key="index" :class="index==navIndex?'active':''" @click="navClick(index,item.name)" data-toggle="collapse" data-target="#menu">
             <!-- <router-link :to="item.path"> -->
-            {{item.name}}
-            <i class="underline"></i>
+            <a :href="item.path" rel="noopener noreferrer">
+              {{item.name}}
+              <i class="underline"></i>
+            </a>
             <!-- </router-link> -->
           </li>
         </ul>
@@ -265,6 +267,12 @@ export default {
   cursor: pointer;
   background: #ccc;
 }
+@media screen and (max-width: 997px) {
+  .header-nav-logo img:nth-of-type(2){
+    display: none;
+  }
+}
+
 @media screen and (max-width: 997px) {
   #header .header-nav-m {
     position: relative;

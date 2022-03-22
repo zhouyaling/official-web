@@ -42,51 +42,53 @@
       </div>
       <!-- 第三部分 公司优势-->
       <div id="bigData" class="container-fuild">
-        <div class="whyChooseUs-title text-center">
-          <p class="">公司优势</p>
-          <p>—— WE ARE MOST PROUD OF, IT IS HAS BEEN “FOCUS”——</p>
-        </div>
-        <div class="row bigData-container">
-          <div class="col-xs-12 col-sm-12 col-md-4 tip-group">
-            <div class="tip-item">
-              <div class="tip-img">
-                <img src="@/assets/img/icon1.png" alt="">
-              </div>
-              <div class="tip-text">
-                <div class="tip-title">服务流程快</div>
-                <div class="tip-subtitle">服务流程快服务流程快服务服务流程快服务流程快服务流程快流程快</div>
-              </div>
-            </div>
-            <div class="tip-item">
-              <div class="tip-img">
-                <img src="@/assets/img/icon1.png" alt="">
-              </div>
-              <div class="tip-text">
-                <div class="tip-title">服务流程快</div>
-                <div class="tip-subtitle">服务流程快服务流程快服务服务流程快服务流程快服务流程快流程快</div>
-              </div>
-            </div>
+        <div class="container">
+          <div class="whyChooseUs-title text-center">
+            <p class="">公司优势</p>
+            <p>—— WE ARE MOST PROUD OF, IT IS HAS BEEN “FOCUS”——</p>
           </div>
-          <div class="col-xs-12 col-sm-12 col-md-4 wow zoomIn">
-            <img class="img-responsive" style="height:350px;margin:0 auto" src="@/assets/img/bg2.png" alt="">
-          </div>
-          <div class="col-xs-12 col-sm-12 col-md-4 tip-group">
-            <div class="tip-item">
-              <div class="tip-img">
-                <img src="@/assets/img/icon1.png" alt="">
+          <div class="row bigData-container">
+            <div class="col-xs-12 col-sm-12 col-md-4 tip-group">
+              <div class="tip-item">
+                <div class="tip-img">
+                  <img src="@/assets/img/icon1.png" alt="">
+                </div>
+                <div class="tip-text">
+                  <div class="tip-title">服务流程快</div>
+                  <div class="tip-subtitle">服务流程快服务流程快服务服务流程快服务流程快服务流程快流程快</div>
+                </div>
               </div>
-              <div class="tip-text">
-                <div class="tip-title">服务流程快</div>
-                <div class="tip-subtitle">服务流程快服务流程快服务服务流程快服务流程快服务流程快流程快</div>
+              <div class="tip-item">
+                <div class="tip-img">
+                  <img src="@/assets/img/icon1.png" alt="">
+                </div>
+                <div class="tip-text">
+                  <div class="tip-title">服务流程快</div>
+                  <div class="tip-subtitle">服务流程快服务流程快服务服务流程快服务流程快服务流程快流程快</div>
+                </div>
               </div>
             </div>
-            <div class="tip-item">
-              <div class="tip-img">
-                <img src="@/assets/img/icon1.png" alt="">
+            <div class="col-xs-12 col-sm-12 col-md-4 wow zoomIn">
+              <img class="img-responsive" style="height:350px;margin:0 auto" src="@/assets/img/bg2.png" alt="">
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 tip-group">
+              <div class="tip-item">
+                <div class="tip-img">
+                  <img src="@/assets/img/icon1.png" alt="">
+                </div>
+                <div class="tip-text">
+                  <div class="tip-title">服务流程快</div>
+                  <div class="tip-subtitle">服务流程快服务流程快服务服务流程快服务流程快服务流程快流程快</div>
+                </div>
               </div>
-              <div class="tip-text">
-                <div class="tip-title">服务流程快</div>
-                <div class="tip-subtitle">服务流程快服务流程快服务服务流程快服务流程快服务流程快流程快</div>
+              <div class="tip-item">
+                <div class="tip-img">
+                  <img src="@/assets/img/icon1.png" alt="">
+                </div>
+                <div class="tip-text">
+                  <div class="tip-title">服务流程快</div>
+                  <div class="tip-subtitle">服务流程快服务流程快服务服务流程快服务流程快服务流程快流程快</div>
+                </div>
               </div>
             </div>
           </div>
@@ -403,7 +405,7 @@ export default {
 }
 #swiper .banner-swiper .swiper-slide-title > h1 {
   font-size: 40px;
-  margin-top: 18%;
+  margin-top: 15%;
 }
 #swiper .banner-swiper .swiper-slide-title > p {
   font-size: 20px;
@@ -653,6 +655,13 @@ export default {
   #swiper .banner-swiper .swiper-slide-title > h1 {
     font-size: 20px;
     margin-top: 22%;
+    display: none;
+  }
+  #ourSuccess .success-item {
+    width: 25%!important;
+  }
+  #ourSuccess .success-item > div:nth-of-type(1) {
+    font-size: 20px!important;
   }
 }
 
@@ -699,6 +708,12 @@ export default {
   }
   #whyChooseUs {
     padding: 20px 0;
+  }
+  #ourSuccess .success-item {
+    width: 25%!important;
+  }
+  #ourSuccess .success-item > div:nth-of-type(1) {
+    font-size: 20px!important;
   }
 }
 

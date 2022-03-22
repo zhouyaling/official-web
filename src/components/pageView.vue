@@ -1,5 +1,5 @@
 <template>
-  <div id="container">
+  <div id="container" style="overflow:hidden">
     <Header></Header>
     <slot name="page"></slot>
     <Footer></Footer>

@@ -12,7 +12,7 @@
             <p class=".text-justify">森舟猎头公司成立于2016年，位于重庆市沙坪坝大学城。从事线上中高端人才代理招聘服务，涵盖全国各省市，致力于为各行业客户挖掘推送优秀人才。目前已与国内大型互联网招聘平台猎聘、智联等达成战略合作。同时也提供蓝领招聘、职业咨询、人力资源外包等服务。公司平台稳定、正处于飞速发展期，团队氛围好期待你的加入！</p>
           </div>
         </div>
-        <div >
+        <div>
           <div class="container customer-container our-news-box">
             <div class="our-news-card" v-for="(item,index) in 8" :key="index">
               <img :src="require(`../../assets/img/img2${index}.jpg`)" alt="">
@@ -258,6 +258,18 @@ export default {
   .CompanyIntroduction-container {
     padding: 10px 0;
     color: #808080;
+  }
+
+  .our-news-card {
+    width: 23%;
+    min-width: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .our-news-card {
+    width: 23%;
+    min-width: 0;
   }
 }
 </style>

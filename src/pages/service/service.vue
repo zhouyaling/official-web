@@ -8,6 +8,7 @@
       <div class="container">
         <div class="Service-container row">
           <div class="Service-item col-xs-12 col-sm-6 col-md-3 wow slideInUp" v-for="(item,index) in serviceList" :key="index" @click="ServiceClick(item.id)">
+            <a :href="`${item.url}?type=${item.title}`">
             <div class="Service-item-wrapper">
               <div class="Service-item-top">
                 <h4>{{item.title}}</h4>
@@ -20,6 +21,7 @@
               <div class="SerVice-item-detail">{{item.sub_title}}</div>
               <div class="Service-item-border"></div>
             </div>
+            </a>
           </div>
         </div>
       </div>
@@ -70,25 +72,29 @@ export default {
           title: '蓝领用工服务',
           sub_title: '为企业提供蓝领用工整体解决方案',
           eng_title: 'Blue Collar Employment',
-          img: require('@/assets/img/service1.jpg')
+          img: require('@/assets/img/service1.jpg'),
+          url:'detail.html',
         }, {
           id: 'section-2',
           title: '猎头服务',
           sub_title: '为企业提供中高端人才招聘解决方案',
           eng_title: 'Headhunting Service',
-          img: require('@/assets/img/service2.jpg')
+          img: require('@/assets/img/service2.jpg'),
+          url:'detail.html',
         }, {
           id: 'section-3',
           title: '人事岗位外包服务',
           sub_title: '为企业提供专业人资模块解决方案',
           eng_title: 'Job Outsourcing',
-          img: require('@/assets/img/service3.jpg')
+          img: require('@/assets/img/service3.jpg'),
+          url:'detail.html',
         }, {
           id: 'section-4',
           title: '职业咨询服务',
           sub_title: '为个人提供职业咨询、规划服务',
           eng_title: 'Career Counseling',
-          img: require('@/assets/img/service4.jpg')
+          img: require('@/assets/img/service4.jpg'),
+          url:'detail.html',
         }
       ],
       newsList: [
