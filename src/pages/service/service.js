@@ -1,6 +1,7 @@
-import Vue from 'Vue'
+import Vue from 'vue'
 import 'jquery'
 import service from './service.vue'
+import router from './router.js'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import GoTop from '../../components/GoTop'
@@ -23,5 +24,8 @@ Vue.config.productionTip = false
 
 new Vue({
     el: '#app',
-    render: h => h(service)
+    router,
+    components: { service },
+    template: '<service/>'
+    // render: h => h(App)
 })

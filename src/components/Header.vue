@@ -83,18 +83,18 @@ export default {
           children: []
         },
         {
-          name: "猎头服务",
+          name: "公司介绍",
+          path: "aboutus.html",
+          children: []
+        },
+        {
+          name: "产品介绍",
           path: "service.html",
           children: []
         },
         {
           name: "新闻动态",
           path: "news.html",
-          children: []
-        },
-        {
-          name: "公司介绍",
-          path: "aboutus.html",
           children: []
         },
         {
