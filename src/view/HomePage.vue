@@ -394,7 +394,7 @@ export default {
   width: 100%;
   height: 100%;
   color: #fff;
-  background: rgba(51, 51, 51, 0.534);
+  background: rgba(51, 51, 51, 0.434);
   text-align: center;
   line-height: 80px;
 }

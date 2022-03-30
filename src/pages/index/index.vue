@@ -398,8 +398,8 @@ export default {
   z-index: 999999999;
   width: 100%;
   height: 100%;
-  color: #fff;
-  background: rgba(51, 51, 51, 0.534);
+  color: rgba(255,255,255,0.6);
+  background: rgba(51, 51, 51, 0.434);
   text-align: center;
   line-height: 80px;
 }

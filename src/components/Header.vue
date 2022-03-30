@@ -2,7 +2,7 @@
   <!-- 头部整体盒子 -->
   <div id="header" class="container-fuild">
     <!-- 头部顶部 -->
-    <div class="header-top container-fuild hidden-xs">
+    <!-- <div class="header-top container-fuild hidden-xs">
       <div class="container">
         <div class="server pull-left">
           <span class="glyphicon glyphicon-earphone"></span>15178726577
@@ -14,7 +14,7 @@
           <span class="glyphicon glyphicon-hand-left"></span>
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- 电脑导航 -->
     <div class="header-nav container hidden-xs">
       <!-- 导航logo -->
@@ -34,13 +34,12 @@
             <i class="underline"></i>
           </a>
           <!-- </router-link> -->
-          <!-- <dl v-if="item.children.length>0">
-            <dt v-for="(i,n) in item.children" :key="n">
-              <router-link :to="i.path">{{i.name}}</router-link>
-            </dt>
-          </dl> -->
         </li>
       </ul>
+      <div class="hot-phone">
+        <span class="phone-text"><span class=" glyphicon glyphicon-earphone "></span>企业咨询热线</span>
+        <span class="phone-number">15178726577</span>
+      </div>
     </div>
     <!-- 手机导航 -->
     <div class="header-nav-m container-fuild visible-xs">
@@ -145,7 +144,7 @@ export default {
   color: #fff;
   font-size: 12px;
   line-height: 50px;
-  background: #b18147;
+  /* background: #b18147; */
   display: none;
 }
 /* 顶部的图标 */
@@ -155,6 +154,8 @@ export default {
 /* 导航栏 */
 #header .header-nav {
   height: 110px;
+  /* background:#b18147; */
+  position: relative;
 }
 /* 导航栏logo */
 #header .header-nav .header-nav-logo {
@@ -183,6 +184,8 @@ export default {
   float: right;
   margin: 0;
   max-width: 800px;
+  position: absolute;
+  right: 210px;
 }
 /* 导航栏 每个导航 */
 #header .header-nav .header-nav-wrapper > li {
@@ -268,7 +271,7 @@ export default {
   background: #ccc;
 }
 @media screen and (max-width: 997px) {
-  .header-nav-logo img:nth-of-type(2){
+  .header-nav-logo img:nth-of-type(2) {
     display: none;
   }
 }
@@ -352,5 +355,29 @@ export default {
   #header .header-nav .header-nav-wrapper > li > a > span {
     font-size: 10px;
   }
+}
+
+.hot-phone {
+  color: #b18147;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  position: absolute;
+  right: 0px;
+  top: 30px;
+}
+
+.hot-phone .phone-text {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.hot-phone .phone-number {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 30px;
+  letter-spacing: -1px;
 }
 </style>
