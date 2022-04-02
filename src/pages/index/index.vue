@@ -191,6 +191,22 @@
           </div>
         </div>
       </div>
+      <!-- 第七部分 合作伙伴 -->
+      <div id="whyChooseUs" class="other conatiner-fuild">
+        <div class="container">
+          <div class="whyChooseUs-title text-center">
+            <p>合作伙伴</p>
+            <p class="yl-sub-title">—— Our Best Partner ——</p>
+          </div>
+          <div class="row row-logo">
+            <div class="row-logo-item" v-for="(item,index) in 10" :key="index">
+              <div class="partner-img-box">
+                <img :src="require('../../assets/img/logo' + item +'.png')" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </page-layout>
 </template>
@@ -309,7 +325,7 @@ export default {
           title: "信息认证安全可信",
           content: "<p>由技术支持工程师，负责问题解答</p>需求受理及故障受理"
         }
-      ]
+      ],
     };
   },
   mounted() {
@@ -398,7 +414,7 @@ export default {
   z-index: 999999999;
   width: 100%;
   height: 100%;
-  color: rgba(255,255,255,0.6);
+  color: rgba(255, 255, 255, 0.6);
   background: rgba(51, 51, 51, 0.434);
   text-align: center;
   line-height: 80px;
@@ -658,10 +674,10 @@ export default {
     display: none;
   }
   #ourSuccess .success-item {
-    width: 25%!important;
+    width: 25% !important;
   }
   #ourSuccess .success-item > div:nth-of-type(1) {
-    font-size: 20px!important;
+    font-size: 20px !important;
   }
 }
 
@@ -710,10 +726,10 @@ export default {
     padding: 20px 0;
   }
   #ourSuccess .success-item {
-    width: 25%!important;
+    width: 25% !important;
   }
   #ourSuccess .success-item > div:nth-of-type(1) {
-    font-size: 20px!important;
+    font-size: 20px !important;
   }
 }
 
@@ -745,6 +761,33 @@ export default {
 
 .yl-img-box img {
   margin: 0 auto;
+}
+
+.row-logo {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.row-logo-item {
+  width: 20%;
+  margin-bottom: 20px;
+}
+
+.partner-img-box {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #f2f2f2;
+}
+
+.partner-img-box img {
+  width: 100%;
+  height: auto;
 }
 
 .visible-xs > div:nth-of-type(odd) {

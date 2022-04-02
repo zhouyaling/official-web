@@ -7,7 +7,7 @@
       </div>
       <div class="container">
         <div class="Service-container row">
-          <div class="Service-item col-xs-12 col-sm-6 col-md-3 wow slideInUp" v-for="(item,index) in serviceList" :key="index" @click="ServiceClick(item.id)">
+          <div class="Service-item col-xs-12 col-sm-6 col-md-3 wow slideInUp" v-for="(item,index) in serviceList" :key="index">
             <router-link :to="`detail?type=${item.title}`">
               <div class="Service-item-wrapper">
                 <div class="Service-item-top">
@@ -26,15 +26,11 @@
         </div>
       </div>
       <!-- 服务流程 -->
-      <div class="container container1" style="margin-bottom:30px">
+      <!-- <div class="container container1" style="margin-bottom:30px">
         <div class="container1 text-center color-orange">
           <h3>服务流程</h3>
           <p style="color:#b2b2b2">Company News</p>
         </div>
-        <!-- <div class="nav container1 text-center">
-                <a href="#" class="active">公司新闻</a>
-                <a href="#">行业动态</a>
-            </div> -->
         <ul class="news-container1 container1-fuild">
           <li v-for="(item,index) in newsList" :key="index" class="wow fadeIn">
             <div class="content">
@@ -54,7 +50,7 @@
         <div class="contaianer-fuild text-center more">
           <i class="glyphicon glyphicon-th"></i>
         </div>
-      </div>
+      </div> -->
     </div>
   </page-layout>
 </template>

@@ -6,7 +6,7 @@
     </div>
     <div class="container">
       <div class="Service-container row">
-        <div class="Service-item col-xs-12 col-sm-6 col-md-3 wow slideInUp" v-for="(item,index) in serviceList" :key="index" @click="ServiceClick(item.id)">
+        <div class="Service-item col-xs-12 col-sm-6 col-md-3 wow slideInUp" v-for="(item,index) in serviceList" :key="index">
           <div class="Service-item-wrapper">
             <div class="Service-item-top">
               <h4>{{item.title}}</h4>

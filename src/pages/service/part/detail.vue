@@ -1,7 +1,7 @@
 <template>
   <page-layout>
     <div slot="page" id="NewsInformation">
-      <div class="container container1">
+      <div class="container container1" style="margin-bottom:50px">
         <div class="container1 text-center color-orange">
           <h3>{{title}}</h3>
         </div>
@@ -11,7 +11,7 @@
         </div>
       </div>
       <!-- 服务流程 -->
-      <div class="container container1" style="margin-bottom:30px">
+      <div v-if="title=='猎头服务'" class="container container1" style="margin-bottom:30px">
         <div class="container1 text-center color-orange">
           <h3>服务流程</h3>
           <p style="color:#b2b2b2">Company News</p>
