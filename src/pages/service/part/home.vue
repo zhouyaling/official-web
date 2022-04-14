@@ -25,8 +25,44 @@
           </div>
         </div>
       </div>
+      <!-- 第一个服务 -->
+      <div class="container first-container">
+        <div class="service-title-box">
+          <div class="service-title">蓝领用工服务</div>
+          <div class="service-sub-title">代理招聘、劳务派遣、产线外包</div>
+        </div>
+        <div class="service-intro-list">
+          <span>代理招聘</span>
+          <span>劳务派遣</span>
+          <span>产线外包</span>
+        </div>
+        <div>
+          <div class="service-good">
+            <div class="service-good-item" v-for="(item,index) in firstList" :key="index">
+              <img src="@/assets/img/icon5.png" alt="">
+              <!-- <div class="font24">{{item.subtitle}}</div> -->
+              <div>{{item.title}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 第二个服务 -->
+      <div class="container second-container">
+        <div class="service-title-box">
+          <div class="service-title">蓝领用工服务</div>
+          <div class="service-sub-title">为企业提供蓝领用工整体解决方案</div>
+        </div>
+
+        <div class="service-good">
+          <div class="service-good-item" v-for="(item,index) in firstList" :key="index">
+            <img src="@/assets/img/icon5.png" alt="">
+            <!-- <div class="font24">{{item.subtitle}}</div> -->
+            <div>{{item.title}}</div>
+          </div>
+        </div>
+      </div>
       <!-- 服务流程 -->
-      <!-- <div class="container container1" style="margin-bottom:30px">
+      <div class="container container1" style="margin-bottom:30px">
         <div class="container1 text-center color-orange">
           <h3>服务流程</h3>
           <p style="color:#b2b2b2">Company News</p>
@@ -50,7 +86,7 @@
         <div class="contaianer-fuild text-center more">
           <i class="glyphicon glyphicon-th"></i>
         </div>
-      </div> -->
+      </div>
     </div>
   </page-layout>
 </template>
@@ -133,6 +169,12 @@ export default {
           date: '07.',
           year: '2019'
         }
+      ],
+      firstList: [
+        { title: '专业的招聘团队', subtitle: '代理招聘' },
+        { title: '丰富的人才资源渠道', subtitle: '劳务派遣' },
+        { title: '交付率高，能短时间内解决企业人才缺口', subtitle: '产线外包' },
+        { title: '多样的服务方案，可以满足不同企业的用工需求', subtitle: '' }
       ]
     }
   },
@@ -362,6 +404,86 @@ export default {
   .news-container1 > li > .circle {
     display: none;
   }
+}
+
+.first-container {
+  /* background: #3e87ee; */
+  background: gray;
+  height: 500px;
+  padding: 40px 0;
+}
+
+.service-title {
+  font-size: 30px;
+  font-weight: bold;
+  color: #ffffff;
+  font-family: "微软雅黑", microsoft yahei;
+  text-align: center;
+  padding-bottom: 6px;
+}
+
+.service-title-box {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.service-sub-title {
+  font-size: 18px;
+  display: inline-block;
+  padding: 10px 1em 0;
+  display: inline-block;
+  border-top: 1px solid #ffffff;
+  text-align: center;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.service-good {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0 10%;
+}
+
+.service-good-item {
+  width: 40%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 16px;
+  color: #ffffff;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.service-good-item .font24 {
+  font-size: 24px;
+}
+
+.service-intro-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-intro-list span {
+  display: inline-block;
+  width: 100px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border: 1px solid #f67c01;
+  color: #f67c01;
+  margin: 0 20px;
+}
+
+.second-container {
+  /* background: #3e87ee; */
+  height: 500px;
+  padding: 40px 0;
 }
 </style>
 

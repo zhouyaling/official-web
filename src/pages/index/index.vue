@@ -44,7 +44,7 @@
       <div id="bigData" class="container-fuild">
         <div class="container">
           <div class="whyChooseUs-title text-center">
-            <p class="">公司优势</p>
+            <p class="">核心价值观</p>
             <p>—— WE ARE MOST PROUD OF, IT IS HAS BEEN “FOCUS”——</p>
           </div>
           <div class="row bigData-container">
@@ -54,7 +54,7 @@
                   <img src="@/assets/img/icon1.png" alt="">
                 </div>
                 <div class="tip-text">
-                  <div class="tip-title">服务流程快</div>
+                  <div class="tip-title">客户是最重要的伙伴</div>
                   <div class="tip-subtitle">服务流程快服务流程快服务服务流程快服务流程快服务流程快流程快</div>
                 </div>
               </div>
@@ -63,7 +63,7 @@
                   <img src="@/assets/img/icon1.png" alt="">
                 </div>
                 <div class="tip-text">
-                  <div class="tip-title">服务流程快</div>
+                  <div class="tip-title">能力对等、价值对等</div>
                   <div class="tip-subtitle">服务流程快服务流程快服务服务流程快服务流程快服务流程快流程快</div>
                 </div>
               </div>
@@ -77,7 +77,7 @@
                   <img src="@/assets/img/icon1.png" alt="">
                 </div>
                 <div class="tip-text">
-                  <div class="tip-title">服务流程快</div>
+                  <div class="tip-title">锐意进取</div>
                   <div class="tip-subtitle">服务流程快服务流程快服务服务流程快服务流程快服务流程快流程快</div>
                 </div>
               </div>
@@ -86,7 +86,7 @@
                   <img src="@/assets/img/icon1.png" alt="">
                 </div>
                 <div class="tip-text">
-                  <div class="tip-title">服务流程快</div>
+                  <div class="tip-title">动态高效</div>
                   <div class="tip-subtitle">服务流程快服务流程快服务服务流程快服务流程快服务流程快流程快</div>
                 </div>
               </div>
@@ -178,7 +178,7 @@
       <div id="whyChooseUs" class="other conatiner-fuild">
         <div class="container">
           <div class="whyChooseUs-title text-center">
-            <p>我们引以为豪的，是一直以来的“专注”</p>
+            <p>我们的责任</p>
             <p class="yl-sub-title">—— WE ARE MOST PROUD OF, IT IS HAS BEEN “FOCUS”——</p>
           </div>
           <div class="row">
@@ -307,23 +307,19 @@ export default {
       serverList1: [
         {
           logo: require("@/assets/img/img11.png"),
-          title: "汇集众多优秀人才",
-          content: "<p>由专业客服提供人工服务</p>负责疑难问题和故障受理"
+          title: "提供切实有效的招聘解决方案",
         },
         {
           logo: require("@/assets/img/img12.png"),
-          title: "职位真实快速反馈",
-          content: "<p>利用远程视频工具，提供协助</p>帮助客户进行调试、解决故障"
+          title: "保障客户权益，保障人才权益",
         },
         {
           logo: require("@/assets/img/img13.png"),
-          title: "企业招聘更快更精准",
-          content: "<p>利用企业QQ提供在线解答</p>帮助企业快速准确解决问题和故障"
+          title: "及时响应客户需求",
         },
         {
           logo: require("@/assets/img/img14.png"),
-          title: "信息认证安全可信",
-          content: "<p>由技术支持工程师，负责问题解答</p>需求受理及故障受理"
+          title: "高效完成委托项目",
         }
       ],
     };
