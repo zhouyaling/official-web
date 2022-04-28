@@ -49,18 +49,42 @@
       <!-- 第二个服务 -->
       <div class="container second-container">
         <div class="service-title-box">
-          <div class="service-title">蓝领用工服务</div>
-          <div class="service-sub-title">为企业提供蓝领用工整体解决方案</div>
+          <div class="service-title">猎头服务</div>
+          <div class="service-sub-title">深耕互联网、电子半导体两大行业，为企业提供中高端人才招聘解决方案</div>
         </div>
-
         <div class="service-good">
-          <div class="service-good-item" v-for="(item,index) in firstList" :key="index">
-            <img src="@/assets/img/icon5.png" alt="">
-            <!-- <div class="font24">{{item.subtitle}}</div> -->
-            <div>{{item.title}}</div>
+          <div class="service-intro-list">
+            <span v-for="(item,index) in secondList" :key="index">{{item}}</span>
           </div>
         </div>
       </div>
+
+      <!-- 第三个服务 -->
+      <div class="container second-container">
+        <div class="service-title-box">
+          <div class="service-title">人事岗位外包服务</div>
+          <div class="service-sub-title">为企业提供专业人资模块解决方案</div>
+        </div>
+        <div class="service-good">
+          <div class="service-intro-list">
+            <span v-for="(item,index) in secondList" :key="index">{{item}}</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 第四个服务 -->
+      <div class="container second-container">
+        <div class="service-title-box">
+          <div class="service-title">职业咨询服务</div>
+          <div class="service-sub-title">为个人提供职业咨询、规划服务</div>
+        </div>
+        <div class="service-good">
+          <div class="service-intro-list">
+            <span v-for="(item,index) in fourList" :key="index">{{item}}</span>
+          </div>
+        </div>
+      </div>
+
       <!-- 服务流程 -->
       <div class="container container1" style="margin-bottom:30px">
         <div class="container1 text-center color-orange">
@@ -175,7 +199,10 @@ export default {
         { title: '丰富的人才资源渠道', subtitle: '劳务派遣' },
         { title: '交付率高，能短时间内解决企业人才缺口', subtitle: '产线外包' },
         { title: '多样的服务方案，可以满足不同企业的用工需求', subtitle: '' }
-      ]
+      ],
+      secondList: ["涵盖该岗位的所有人力资源工作--招聘", "入离职手续办理", "上岗前培训", "薪酬", "社保管理", "档案管理", "在职维护", "出勤", "加班管理", "工伤", "劳动纠纷处理等"],
+      thirdList: ["涵盖该岗位的所有人力资源工作--招聘、入离职手续办理、上岗前培训、薪酬、社保管理、档案管理、在职维护、出勤、加班管理、工伤、劳动纠纷处理"],
+      fourList: ["借助专业测评工具全方位自我剖析，专业顾问团队出具具体解决方案并持续跟进完美助力个人职业转型"],
     }
   },
   mounted() {
@@ -408,7 +435,7 @@ export default {
 
 .first-container {
   /* background: #3e87ee; */
-  background: gray;
+  background: #f2f2f2;
   height: 500px;
   padding: 40px 0;
 }
@@ -467,6 +494,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .service-intro-list span {
@@ -478,10 +506,13 @@ export default {
   border: 1px solid #f67c01;
   color: #f67c01;
   margin: 0 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .second-container {
-  /* background: #3e87ee; */
+  background: #3e87ee;
   height: 500px;
   padding: 40px 0;
 }
