@@ -67,7 +67,7 @@
         </div>
         <div class="service-good">
           <div class="service-intro-list ">
-            <span v-for="(item,index) in secondList" :key="index">{{item}}</span>
+            <div class="service-intro-item">服务内容：{{thirdList[0]}}</div>
           </div>
         </div>
       </div>
@@ -200,7 +200,8 @@ export default {
         { title: '交付率高，能短时间内解决企业人才缺口', subtitle: '产线外包' },
         { title: '多样的服务方案，可以满足不同企业的用工需求', subtitle: '' }
       ],
-      thirdList: ["涵盖该岗位的所有人力资源工作--招聘", "入离职手续办理", "上岗前培训", "薪酬", "社保管理", "档案管理", "在职维护", "出勤", "加班管理", "工伤", "劳动纠纷处理等"],
+      thirdList: ["涵盖该岗位的所有人力资源工作：包括招聘、入离职手续办理、上岗前培训、薪酬, 社保管理、档案管理、在职维护、 出勤、 加班管理、工伤、 劳动纠纷处理等"],
+      // thirdList: ["涵盖该岗位的所有人力资源工作--招聘", "入离职手续办理", "上岗前培训", "薪酬", "社保管理", "档案管理", "在职维护", "出勤", "加班管理", "工伤", "劳动纠纷处理等"],
       secondList: ["6000万+优质活跃人才库", "专业顾问对接精准把控客户需求", "运作流程规范岗位交付快、准、稳"],
       fourList: ["借助专业测评工具全方位自我剖析，专业顾问团队出具具体解决方案并持续跟进完美助力个人职业转型"],
     }
@@ -433,13 +434,6 @@ export default {
   }
 }
 
-.first-container {
-  background: #3e87ee;
-  /* background: #f2f2f2; */
-  height: 500px;
-  padding: 40px 0;
-}
-
 .service-title {
   font-size: 30px;
   font-weight: bold;
@@ -525,7 +519,8 @@ export default {
 
 .service-intro-list .service-intro-item2 {
   color: #3e87ee;
-  background: #fff;
+  /* color: rgba(62,135,238,0.5); */
+  background: #f2f2f2;
   width: 30%;
   height: 100px;
   text-align: center;
@@ -540,10 +535,22 @@ export default {
   font-size: 16px;
 }
 
-.second-container {
-  background: #3e87ee;
-  height: 500px;
+.first-container {
+  /* background: #3e87ee; */
+  background: rgba(62, 135, 238, 0.7);
+  /* background: #f2f2f2; */
+  /* height: 500px; */
   padding: 40px 0;
+  margin-bottom: 40px;
+}
+
+.second-container {
+  /* background: #3e87ee; */
+  background: rgba(62, 135, 238, 0.7);
+  /* height: 500px; */
+  min-height: 300px;
+  padding: 40px 0;
+  margin-bottom: 40px;
 }
 </style>
 
