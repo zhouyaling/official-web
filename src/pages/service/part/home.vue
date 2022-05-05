@@ -28,8 +28,8 @@
       <!-- 第一个服务 -->
       <div class="container first-container">
         <div class="service-title-box">
-          <div class="service-title">蓝领用工服务</div>
-          <div class="service-sub-title">代理招聘、劳务派遣、产线外包</div>
+          <div class="service-title"><span>蓝领用工服务</span></div>
+          <div class="service-sub-title">为企业提供蓝领用工整体解决方案</div>
         </div>
         <div class="service-intro-list">
           <span>代理招聘</span>
@@ -49,12 +49,12 @@
       <!-- 第二个服务 -->
       <div class="container second-container">
         <div class="service-title-box">
-          <div class="service-title">猎头服务</div>
+          <div class="service-title"><span>猎头服务</span></div>
           <div class="service-sub-title">深耕互联网、电子半导体两大行业，为企业提供中高端人才招聘解决方案</div>
         </div>
         <div class="service-good">
-          <div class="service-intro-list">
-            <span v-for="(item,index) in secondList" :key="index">{{item}}</span>
+          <div class="service-intro-list" style="justify-content: space-around;">
+            <div class="service-intro-item2" v-for="(item,index) in secondList" :key="index">{{item}}</div>
           </div>
         </div>
       </div>
@@ -62,11 +62,11 @@
       <!-- 第三个服务 -->
       <div class="container second-container">
         <div class="service-title-box">
-          <div class="service-title">人事岗位外包服务</div>
+          <div class="service-title"><span>人事岗位外包服务</span></div>
           <div class="service-sub-title">为企业提供专业人资模块解决方案</div>
         </div>
         <div class="service-good">
-          <div class="service-intro-list">
+          <div class="service-intro-list ">
             <span v-for="(item,index) in secondList" :key="index">{{item}}</span>
           </div>
         </div>
@@ -75,12 +75,12 @@
       <!-- 第四个服务 -->
       <div class="container second-container">
         <div class="service-title-box">
-          <div class="service-title">职业咨询服务</div>
+          <div class="service-title"><span>职业咨询服务</span></div>
           <div class="service-sub-title">为个人提供职业咨询、规划服务</div>
         </div>
         <div class="service-good">
           <div class="service-intro-list">
-            <span v-for="(item,index) in fourList" :key="index">{{item}}</span>
+            <div class="service-intro-item">服务内容：{{fourList[0]}}</div>
           </div>
         </div>
       </div>
@@ -200,8 +200,8 @@ export default {
         { title: '交付率高，能短时间内解决企业人才缺口', subtitle: '产线外包' },
         { title: '多样的服务方案，可以满足不同企业的用工需求', subtitle: '' }
       ],
-      secondList: ["涵盖该岗位的所有人力资源工作--招聘", "入离职手续办理", "上岗前培训", "薪酬", "社保管理", "档案管理", "在职维护", "出勤", "加班管理", "工伤", "劳动纠纷处理等"],
-      thirdList: ["涵盖该岗位的所有人力资源工作--招聘、入离职手续办理、上岗前培训、薪酬、社保管理、档案管理、在职维护、出勤、加班管理、工伤、劳动纠纷处理"],
+      thirdList: ["涵盖该岗位的所有人力资源工作--招聘", "入离职手续办理", "上岗前培训", "薪酬", "社保管理", "档案管理", "在职维护", "出勤", "加班管理", "工伤", "劳动纠纷处理等"],
+      secondList: ["6000万+优质活跃人才库", "专业顾问对接精准把控客户需求", "运作流程规范岗位交付快、准、稳"],
       fourList: ["借助专业测评工具全方位自我剖析，专业顾问团队出具具体解决方案并持续跟进完美助力个人职业转型"],
     }
   },
@@ -434,8 +434,8 @@ export default {
 }
 
 .first-container {
-  /* background: #3e87ee; */
-  background: #f2f2f2;
+  background: #3e87ee;
+  /* background: #f2f2f2; */
   height: 500px;
   padding: 40px 0;
 }
@@ -446,6 +446,11 @@ export default {
   color: #ffffff;
   font-family: "微软雅黑", microsoft yahei;
   text-align: center;
+  position: relative;
+}
+
+.service-title span {
+  border-bottom: 1px solid #fff;
   padding-bottom: 6px;
 }
 
@@ -460,7 +465,7 @@ export default {
   display: inline-block;
   padding: 10px 1em 0;
   display: inline-block;
-  border-top: 1px solid #ffffff;
+  /* border-top: 1px solid #ffffff; */
   text-align: center;
   color: #ffffff;
   font-family: Arial, Helvetica, sans-serif;
@@ -495,6 +500,8 @@ export default {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+
+  width: 100%;
 }
 
 .service-intro-list span {
@@ -509,6 +516,28 @@ export default {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.service-intro-list .service-intro-item {
+  color: #fff;
+  font-size: 16px;
+}
+
+.service-intro-list .service-intro-item2 {
+  color: #3e87ee;
+  background: #fff;
+  width: 30%;
+  height: 100px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+}
+
+.service-intro-list .service-intro-item {
+  color: #fff;
+  font-size: 16px;
 }
 
 .second-container {
