@@ -26,7 +26,7 @@
         </div>
       </div>
       <!-- 第一个服务 -->
-      <div class="container first-container">
+      <div class="first-container">
         <div class="service-title-box">
           <div class="service-title"><span>蓝领用工服务</span></div>
           <div class="service-sub-title">为企业提供蓝领用工整体解决方案</div>
@@ -60,7 +60,7 @@
       </div>
 
       <!-- 第三个服务 -->
-      <div class="container second-container">
+      <div class="container third-container">
         <div class="service-title-box">
           <div class="service-title"><span>人事岗位外包服务</span></div>
           <div class="service-sub-title">为企业提供专业人资模块解决方案</div>
@@ -500,13 +500,13 @@ export default {
 
 .service-intro-list span {
   display: inline-block;
-  width: 100px;
+  width: 120px;
   height: 40px;
   line-height: 40px;
   text-align: center;
-  border: 1px solid #f67c01;
-  color: #f67c01;
-  margin: 0 20px;
+  border: 1px solid rgb(177, 129, 71);
+  color: rgb(177, 129, 71);
+  margin: 0 30px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -519,8 +519,8 @@ export default {
 
 .service-intro-list .service-intro-item2 {
   color: #3e87ee;
-  /* color: rgba(62,135,238,0.5); */
-  background: #f2f2f2;
+  background: rgb(177, 129, 71);
+  color: #ffffff;
   width: 30%;
   height: 100px;
   text-align: center;
@@ -528,6 +528,7 @@ export default {
   align-items: center;
   justify-content: center;
   font-size: 15px;
+
 }
 
 .service-intro-list .service-intro-item {
@@ -536,21 +537,34 @@ export default {
 }
 
 .first-container {
-  /* background: #3e87ee; */
-  background: rgba(62, 135, 238, 0.7);
-  /* background: #f2f2f2; */
-  /* height: 500px; */
+  /* background: #222428; */
+  background: url('../../../assets/img/bg1.jpg') no-repeat center;
+  background-size: 100% 100%;
   padding: 40px 0;
-  margin-bottom: 40px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .second-container {
-  /* background: #3e87ee; */
-  background: rgba(62, 135, 238, 0.7);
-  /* height: 500px; */
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background: #ffffff;
   min-height: 300px;
   padding: 40px 0;
-  margin-bottom: 40px;
+  /* margin-bottom: 40px; */
+}
+
+
+.third-container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+ background: #222428;
+  min-height: 300px;
+  padding: 40px 0;
+  /* margin-bottom: 40px; */
 }
 </style>
 
