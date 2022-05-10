@@ -31,10 +31,10 @@
           </div>
           <div class="row">
             <div class="col-xs-12 col-sm-6 col-md-3 server-wrapper" v-for="(item,index) in serverList" :key="index">
-              <div class="server-block wow slideInUp" style="height:332px;background:#ffffff;" onmouseenter="this.style.color='#B18147';this.style.borderColor='#B18147'" onmouseleave="this.style.color='#B18147';this.style.borderColor='#B18147'">
+              <div class="server-block wow slideInUp" style="height:332px;background:#ffffff;" onmouseenter="this.style.color='rgb(186, 154, 81)';this.style.borderColor='rgb(186, 154, 81)'" onmouseleave="this.style.color='rgb(186, 154, 81)';this.style.borderColor='rgb(186, 154, 81)'">
                 <img class="center-block" :src="item.logo" alt="logo">
                 <p class="text-center">{{item.title}}</p>
-                <div class="text-center" v-html="item.content" onmouseenter="this.style.color='#B18147'" onmouseleave="this.style.color='#666666'"></div>
+                <div class="text-center" v-html="item.content" onmouseenter="this.style.color='rgb(186, 154, 81)'" onmouseleave="this.style.color='#666666'"></div>
               </div>
             </div>
           </div>
@@ -99,7 +99,7 @@
         <div class="container contactUs-container wow slideInUp">
           <h1>发展成为服务于全国的大型综合性人力资源服务企业</h1>
           <h3>—— Comprehensive human resource service enterprise ——</h3>
-          <a href="#" class="btn btn-lg btn-block btn-info" style="background:#B18147;border:none;width:24%;margin:0 auto">联系我们</a>
+          <a href="#" class="btn btn-lg btn-block btn-info" style="background:rgb(186, 154, 81);border:none;width:24%;margin:0 auto">联系我们</a>
           <div class="contactUs-contactWay">
             <span></span>
             <span></span>
@@ -436,7 +436,7 @@ export default {
 #bigData .whyChooseUs-title p:nth-of-type(1) {
   font-size: 25px;
   font-weight: 500;
-  color: #b18147;
+  color: rgb(186, 154, 81);
 }
 
 #bigData .bigData-title {
@@ -501,12 +501,12 @@ export default {
 #customer .customer-title p:nth-of-type(1) {
   font-size: 25px;
   font-weight: 500;
-  color: #b18147;
+  color: rgb(186, 154, 81);
 }
 
 /* #customer .customer-title {
   font-size: 25px;
-  color: #b18147;
+  color: rgb(186, 154, 81);
   margin: 0 0 30px;
 } */
 #customer .customer-block {
@@ -558,15 +558,15 @@ export default {
 #whyChooseUs .whyChooseUs-title p:nth-of-type(1) {
   font-size: 25px;
   font-weight: 500;
-  color: #b18147;
+  color: rgb(186, 154, 81);
 }
 #whyChooseUs .whyChooseUs-title p:nth-of-type(2) {
   font-size: 14px;
 }
 #whyChooseUs .server-block {
   padding: 70px 20px;
-  border: 1px solid #b18147;
-  border-bottom: 5px solid #b18147;
+  border: 1px solid rgb(186, 154, 81);
+  border-bottom: 5px solid rgb(186, 154, 81);
 }
 #whyChooseUs .server-block img {
   width: 60px;
@@ -827,7 +827,7 @@ export default {
   width: 100%;
   height: 160px;
   /* background: #bba574; */
-  background: rgb(177, 129, 71);
+  background: rgb(186, 154, 81);
   display: flex;
   align-items: center;
   justify-content: center;

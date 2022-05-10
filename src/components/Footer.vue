@@ -4,8 +4,8 @@
       <img style="height:60px;width:auto;" src="@/assets/img/logo_white.png" alt="logo图">
        <!-- <img style="height:60px;width:auto;" src="@/assets/img/logo-text.png" alt="logo图"> -->
     </div>
-    <!-- #6A3906 #B18147-->
-    <p class="title" style="color:#B18147;padding-top:20px">森舟猎头 — 服务于全国的大型综合性人力资源服务企业！</p>
+    <!-- #6A3906 rgb(186, 154, 81)-->
+    <p class="title" style="color:rgb(186, 154, 81);padding-top:20px">森舟猎头 — 服务于全国的大型综合性人力资源服务企业！</p>
     <p class="address_tel_fax">
       <span>地址：重庆高新区虎溪街道景阳路26号15幢10-10、10-11、10-12</span>
       

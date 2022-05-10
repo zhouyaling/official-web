@@ -185,7 +185,7 @@ export default {
   font-size: 50px;
   margin: 5px 0;
   font-family: Tahoma;
-  color: #b18147;
+  color: rgb(186, 154, 81);
 }
 .news-container1 > li > .circle {
   width: 20%;
