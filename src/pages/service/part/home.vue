@@ -1,31 +1,27 @@
 <template>
-  <page-layout style="background: #f2f2f2">
-    <div slot="page" id="Service">
+  <page-layout style="">
+    <div slot="page" class="test" id="Service">
       <div class="container text-center color-orange">
         <h3>我们的服务</h3>
         <p style="color: #b2b2b2">The Best Service You Never See</p>
       </div>
       <div class="container">
         <div class="Service-container row">
-          <div
-            class="Service-item col-xs-12 col-sm-6 col-md-3 wow slideInUp"
-            v-for="(item, index) in serviceList"
-            :key="index"
-          >
-            <router-link :to="`detail?type=${item.title}`">
-              <div class="Service-item-wrapper">
-                <div class="Service-item-top">
-                  <h4>{{ item.title }}</h4>
-                  <i></i>
-                  <p>{{ item.eng_title }}</p>
-                </div>
-                <div class="Service-item-img">
-                  <img :src="item.img" alt="服务" />
-                </div>
-                <div class="SerVice-item-detail">{{ item.sub_title }}</div>
-                <div class="Service-item-border"></div>
+          <div class="Service-item col-xs-12 col-sm-6 col-md-3 wow slideInUp" v-for="(item, index) in serviceList" :key="index">
+            <!-- <router-link :to="`detail?type=${item.title}`"> -->
+            <div class="Service-item-wrapper">
+              <div class="Service-item-top">
+                <h4>{{ item.title }}</h4>
+                <i></i>
+                <p>{{ item.eng_title }}</p>
               </div>
-            </router-link>
+              <div class="Service-item-img">
+                <img :src="item.img" alt="服务" />
+              </div>
+              <div class="SerVice-item-detail">{{ item.sub_title }}</div>
+              <div class="Service-item-border"></div>
+            </div>
+            <!-- </router-link> -->
           </div>
         </div>
       </div>
@@ -33,40 +29,21 @@
       <!-- 服务切换 -->
       <div class="container">
         <div class="service-nav">
-          <div
-            class="service-nav-item"
-            :class="{ active: currentWrapper === 0 }"
-            @mouseover="changeWrapper(0)"
-          >
+          <div class="service-nav-item" :class="{ active: currentWrapper === 0 }" @mouseover="changeWrapper(0)">
             蓝领用工服务
           </div>
-          <div
-            class="service-nav-item"
-            :class="{ active: currentWrapper === 1 }"
-            @mouseover="changeWrapper(1)"
-          >
+          <div class="service-nav-item" :class="{ active: currentWrapper === 1 }" @mouseover="changeWrapper(1)">
             猎头服务
           </div>
-          <div
-            class="service-nav-item"
-            :class="{ active: currentWrapper === 2 }"
-            @mouseover="changeWrapper(2)"
-          >
+          <div class="service-nav-item" :class="{ active: currentWrapper === 2 }" @mouseover="changeWrapper(2)">
             人事岗位外包服务
           </div>
-          <div
-            class="service-nav-item"
-            :class="{ active: currentWrapper === 3 }"
-            @mouseover="changeWrapper(3)"
-          >
+          <div class="service-nav-item" :class="{ active: currentWrapper === 3 }" @mouseover="changeWrapper(3)">
             职业咨询服务
           </div>
         </div>
         <div class="service-wrapper">
-          <div
-            class="service-wrapper-item"
-            :class="{ active: currentWrapper === 0 }"
-          >
+          <div class="service-wrapper-item" :class="{ active: currentWrapper === 0 }">
             <!-- 第一个服务 -->
             <div class="first-container">
               <!-- <img src="@/assets/img/img1.jpg" alt="" />
@@ -94,25 +71,15 @@
               </div>
               <div>
                 <div class="service-good">
-                  <div
-                    class="service-good-item"
-                    v-for="(item, index) in firstList"
-                    :key="index"
-                  >
-                    <img
-                      :src="require(`../../../assets/img/${item.icon}`)"
-                      alt=""
-                    />
+                  <div class="service-good-item" v-for="(item, index) in firstList" :key="index">
+                    <img :src="require(`../../../assets/img/${item.icon}`)" alt="" />
                     <div>{{ item.title }}</div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div
-            class="service-wrapper-item"
-            :class="{ active: currentWrapper === 1 }"
-          >
+          <div class="service-wrapper-item" :class="{ active: currentWrapper === 1 }">
             <!-- 第二个服务 -->
             <div class="second-container">
               <div class="service-title-box">
@@ -122,35 +89,20 @@
                 </div>
               </div>
               <div class="service-good">
-                <div
-                  class="service-intro-list"
-                  style="justify-content: space-around"
-                >
-                  <div
-                    class="service-intro-item2"
-                    v-for="(item, index) in secondList"
-                    :key="index"
-                  >
+                <div class="service-intro-list" style="justify-content: space-around">
+                  <div class="service-intro-item2" v-for="(item, index) in secondList" :key="index">
                     {{ item }}
                   </div>
                 </div>
               </div>
               <!-- 服务流程 -->
-              <div
-                class="ccontainer1"
-                style="margin-bottom: 30px"
-                v-if="currentWrapper === 1"
-              >
+              <div class="ccontainer1" style="margin-bottom: 30px" v-if="currentWrapper === 1">
                 <div class="container1 text-center color-orange">
                   <h3>服务流程</h3>
-                  <p style="color: #b2b2b2">Service Process</p>
+                  <!-- <p style="color: #b2b2b2">Service Process</p> -->
                 </div>
                 <ul class="news-container1 container1-fuild">
-                  <li
-                    v-for="(item, index) in newsList"
-                    :key="index"
-                    class="wow fadeIn"
-                  >
+                  <li v-for="(item, index) in newsList" :key="index" class="wow fadeIn">
                     <div class="content">
                       <p>{{ item.title }}</p>
                       <p>{{ item.introduce }}</p>
@@ -171,10 +123,7 @@
               </div>
             </div>
           </div>
-          <div
-            class="service-wrapper-item"
-            :class="{ active: currentWrapper === 2 }"
-          >
+          <div class="service-wrapper-item" :class="{ active: currentWrapper === 2 }">
             <!-- 第三个服务 -->
             <div class="third-container">
               <div class="service-title-box">
@@ -186,20 +135,17 @@
               <div class="service-good">
                 <div class="service-intro-list">
                   <div class="service-intro-item">
-                   <div> 服务内容：</div>
-                   <div>{{ thirdList[0] }}</div>
+                    <div> 服务内容：</div>
+                    <div>{{ thirdList[0] }}</div>
                   </div>
                 </div>
               </div>
               <div class="contact-btn">电话咨询：15178726577</div>
             </div>
           </div>
-          <div
-            class="service-wrapper-item"
-            :class="{ active: currentWrapper === 3 }"
-          >
+          <div class="service-wrapper-item" :class="{ active: currentWrapper === 3 }">
             <!-- 第四个服务 -->
-            <div class="second-container">
+            <div class="third-container">
               <div class="service-title-box">
                 <div class="service-title"><span>职业咨询服务</span></div>
                 <div class="service-sub-title">
@@ -379,9 +325,11 @@ export default {
 }
 .Service-item-wrapper {
   cursor: pointer;
-  background: rgba(244, 244, 244, 1);
+  background: rgba(255, 255, 255, 1);
   overflow: hidden;
   position: relative;
+  box-shadow: 0 0 20px #EEEEEE;
+  border-radius: 8px;
 }
 .Service-item-top {
   width: 100%;
@@ -407,6 +355,7 @@ export default {
 .SerVice-item-detail {
   margin: 20px 0;
   text-align: center;
+  color: #444;
 }
 .Service-item-img {
   width: 100%;
@@ -502,11 +451,11 @@ export default {
 }
 .news-container1 > li > .content p:nth-child(1) {
   font-size: 20px;
-  color: #666666;
+  color: rgba(186, 154, 81, 1);
   font-family: "微软雅黑";
 }
 .news-container1 > li > .content p:nth-child(2) {
-  color: #888888;
+  color: #444;
 }
 .news-container1 > li > .time {
   width: 20%;
@@ -521,6 +470,9 @@ export default {
   margin: 5px 0;
   font-family: Tahoma;
   color: rgb(186, 154, 81);
+  background: linear-gradient(0deg, #ff6d28 0%, rgb(186, 154, 81) 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .news-container1 > li > .circle {
   width: 20%;
@@ -666,8 +618,9 @@ export default {
 }
 
 .service-intro-list .service-intro-item {
-  color: #777777;
+  color: #444;
   font-size: 15px;
+  line-height: 25px;
 }
 
 .service-intro-list .service-intro-item2 {
@@ -685,7 +638,7 @@ export default {
 
 .first-container {
   background-color: #ffffff;
-  background-image: url("../../../assets/img/bg3.png");
+  background-image: url("../../../assets/img/bg1.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
@@ -702,8 +655,11 @@ export default {
   margin-right: auto;
   min-height: 450px;
   padding: 40px 0;
-  /* background: #f2f2f2; */
   background: #ffffff;
+  background-image: url("../../../assets/img/bg1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
   /* border: 1px solid rgba(186, 154, 81, 0.6); */
   /* background: url('../../../assets/img/bg1.jpg') no-repeat center; */
   /* background-size: 100% 100%; */
@@ -715,9 +671,11 @@ export default {
   margin-left: auto;
   margin-right: auto;
   /* background: #f2f2f2; */
-  background: #ffffff;
+  /* background: #ffffff; */
   /* border: 1px solid rgba(186, 154, 81, 0.6); */
-  background: url("../../../assets/img/bg3.png") no-repeat center;
+  background-image: url("../../../assets/img/bg21.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: 100% 100%;
   min-height: 450px;
   padding: 40px 0;
@@ -732,7 +690,7 @@ export default {
   width: 130px;
   height: 50px;
   text-align: center;
-  color: rgba(119, 119, 119, 1);
+  color: #444;
   font-size: 14px;
   /* background: rgba(243, 243, 243, 1); */
   background: #ffffff;
@@ -766,7 +724,7 @@ export default {
 .service-wrapper-item {
   width: 100%;
   min-height: 500px;
-  background: #f2f2f2;
+  /* background: #f2f2f2; */
   /* position: absolute;
   left: 0;
   top: 0; */
@@ -799,10 +757,10 @@ export default {
 .first-container-body {
 }
 
-.contact-btn{
+.contact-btn {
   width: 300px;
   height: 44px;
-  line-height:44px;
+  line-height: 44px;
   /* background-color: rgba(39, 40, 40, 1); */
   background-color: rgb(186, 154, 81);
   color: #ffffff;
@@ -811,6 +769,14 @@ export default {
   text-align: center;
   margin: 0 auto;
   margin-top: 30px;
+  cursor: pointer;
+}
+
+.test {
+  background-image: url("../../../assets/img/bg3.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100% 25%;
 }
 </style>
 

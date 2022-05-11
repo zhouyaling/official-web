@@ -380,5 +380,8 @@ export default {
   font-weight: 600;
   line-height: 30px;
   letter-spacing: -1px;
+  background: linear-gradient(180deg, #ffffff 0%, rgb(186, 154, 81) 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 </style>
