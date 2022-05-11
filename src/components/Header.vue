@@ -136,7 +136,8 @@ export default {
 <style scoped>
 /* 顶部 */
 #header {
-  background: #f4f4f4;
+  /* background: #f4f4f4; */
+  background: #282828;
   transition: all ease 0.6s;
 }
 #header .header-top {
@@ -144,7 +145,7 @@ export default {
   color: #fff;
   font-size: 12px;
   line-height: 50px;
-  /* background: #b18147; */
+  /* background: rgb(186, 154, 81); */
   display: none;
 }
 /* 顶部的图标 */
@@ -154,7 +155,7 @@ export default {
 /* 导航栏 */
 #header .header-nav {
   height: 110px;
-  /* background:#b18147; */
+  /* background:rgb(186, 154, 81); */
   position: relative;
 }
 /* 导航栏logo */
@@ -195,8 +196,8 @@ export default {
 }
 /* 导航栏 每个导航下面的 a 链接 */
 #header .header-nav .header-nav-wrapper > li > a {
-  color: #2b2b2b;
-  font-size: 16px;
+  color: #ffffff;
+  font-size: 15px;
   /* font-weight: bold; */
   font-family: "微软雅黑";
   padding: 15px 0;
@@ -212,7 +213,7 @@ export default {
   height: 2px;
   opacity: 0;
   transition: all 0.6s ease;
-  background-color: #b18147;
+  background-color: rgb(186, 154, 81);
 }
 /* 导航栏 每个导航下面的 a 链接的右侧小三角 */
 #header .header-nav .header-nav-wrapper > li > a > span {
@@ -221,7 +222,7 @@ export default {
 }
 /* 导航栏 每个导航下面的 a 链接 鼠标滑上去的样式 */
 #header .header-nav .header-nav-wrapper > li > a:hover {
-  color: #b18147;
+  color: rgb(186, 154, 81);
   text-decoration: none;
 }
 /* 导航栏 每个导航下面的 a 链接 鼠标滑上去下划线的样式 */
@@ -236,9 +237,9 @@ export default {
 }
 /* 导航栏 每个导航下面的 a 链接 鼠标点击后的样式 */
 #header .header-nav .header-nav-wrapper > li.active > a {
-  color: #b18147;
+  color: rgb(186, 154, 81);
   text-decoration: none;
-  border-bottom: 2px solid #b18147;
+  border-bottom: 2px solid rgb(186, 154, 81);
   font-weight: 600;
 }
 /* 导航栏 每个导航下面的二级导航容器 */
@@ -312,7 +313,7 @@ export default {
     height: 50px;
     font-size: 20px;
     line-height: 50px;
-    background: #b18147;
+    background: rgb(186, 154, 81);
     position: relative;
   }
   /* 导航栏 菜单图标 */
@@ -333,7 +334,7 @@ export default {
     top: 50px;
     left: 0;
     width: 100%;
-    background: #b18147;
+    background: rgb(186, 154, 81);
     z-index: 9999999;
   }
   /* 导航栏 每个导航 */
@@ -358,7 +359,7 @@ export default {
 }
 
 .hot-phone {
-  color: #b18147;
+  color: rgb(186, 154, 81);
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;

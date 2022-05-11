@@ -190,12 +190,12 @@ export default {
 #customer .customer-title p:nth-of-type(1) {
   font-size: 25px;
   font-weight: 500;
-  color: #b18147;
+  color: rgb(186, 154, 81);
 }
 
 /* #customer .customer-title {
   font-size: 25px;
-  color: #b18147;
+  color: rgb(186, 154, 81);
   margin: 0 0 30px;
 } */
 #customer .customer-block {

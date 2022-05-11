@@ -173,10 +173,10 @@ export default {
   display: inline-block;
   width: 25px;
   height: 2px;
-  background: #b18147;
+  background: rgb(186, 154, 81);
 }
 .Service-item-top > h4 {
-  color: #b18147;
+  color: rgb(186, 154, 81);
 }
 .Service-item-top > p {
   color: #b2b2b2;
@@ -207,7 +207,7 @@ export default {
   width: 100%;
   height: 100%;
   transition: all 0.5s ease;
-  border: 1px solid #b18147;
+  border: 1px solid rgb(186, 154, 81);
   opacity: 0;
 }
 .Service-item-wrapper:hover .Service-item-top > i {
@@ -297,7 +297,7 @@ export default {
   font-size: 50px;
   margin: 5px 0;
   font-family: Tahoma;
-  color: #b18147;
+  color: rgb(186, 154, 81);
 }
 .news-container1 > li > .circle {
   width: 20%;

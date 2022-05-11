@@ -121,7 +121,7 @@ export default {
   font-size: 50px;
   margin: 5px 0;
   font-family: Tahoma;
-  color: #b18147;
+  color: rgb(186, 154, 81);
 }
 .news-container1 > li > .circle {
   width: 20%;
@@ -191,7 +191,7 @@ export default {
 }
 
 .news-item:hover {
-  background: rgba(177, 129, 71, 0.3);
+  background: rgba(186, 154, 81, 0.3);
 }
 
 .news-list .news-item:last-of-type {

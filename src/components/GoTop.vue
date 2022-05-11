@@ -42,7 +42,7 @@ export default {
 }
 #GoTop:hover{
   transition: all 0.6s;
-  background-color: #B18147;
+  background-color: rgb(186, 154, 81);
 }
 
 #GoTop:hover >span{
@@ -53,7 +53,7 @@ export default {
   display: block;
   width: 34px;
   height: 36px;
-  color: #B18147;
+  color: rgb(186, 154, 81);
   font-size: 34px;
 }
 </style>
