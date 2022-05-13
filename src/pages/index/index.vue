@@ -22,19 +22,42 @@
         </div>
       </div>
 
+         <!-- 第七部分 我们的成绩-->
+      <div id="ourSuccess">
+        <div class="success-item">
+          <div>1,000 <i>+</i></div>
+          <div>高级猎头顾问</div>
+        </div>
+        <div class="success-item">
+          <div>60,000 <i>+</i></div>
+          <div>精英人才库</div>
+        </div>
+        <div class="success-item">
+          <div>10,238</div>
+          <div>服务客户</div>
+        </div>
+        <div class="success-item">
+          <div>9,016</div>
+          <div>职位案例</div>
+        </div>
+      </div>
+
       <!-- 第二部分 主营业务-->
       <div id="whyChooseUs" class="conatiner-fuild">
         <div class="container">
           <div class="whyChooseUs-title text-center">
             <p>主营业务</p>
-            <p>—— WE ARE MOST PROUD OF, IT IS HAS BEEN “FOCUS”——</p>
+            <p>——  WE ARE MOST PROUD OF, IT IS HAS BEEN “FOCUS” ——</p>
           </div>
           <div class="row">
             <div class="col-xs-12 col-sm-6 col-md-3 server-wrapper" v-for="(item,index) in serverList" :key="index">
-              <div class="server-block wow slideInUp" style="height:332px;background:#ffffff;" onmouseenter="this.style.color='rgb(186, 154, 81)';this.style.borderColor='rgb(186, 154, 81)'" onmouseleave="this.style.color='rgb(186, 154, 81)';this.style.borderColor='rgb(186, 154, 81)'">
+              <div class="server-block wow slideInUp">
                 <img class="center-block" :src="item.logo" alt="logo">
                 <p class="text-center">{{item.title}}</p>
-                <div class="text-center" v-html="item.content" onmouseenter="this.style.color='rgb(186, 154, 81)'" onmouseleave="this.style.color='#666666'"></div>
+                <div class="text-center" v-html="item.content"></div>
+                <a href="service.html" rel="noopener noreferrer">
+                  <div class="service-btn">查看详情</div>
+                </a>
               </div>
             </div>
           </div>
@@ -47,6 +70,8 @@
             <p class="">核心价值观</p>
             <p>—— WE ARE MOST PROUD OF, IT IS HAS BEEN “FOCUS”——</p>
           </div>
+          <!-- <img src="@/assets/img/bg22.png" alt="">
+          <img src="@/assets/img/bg27.png" alt=""> -->
           <div class="row bigData-container">
             <div class="col-xs-12 col-sm-12 col-md-4 tip-group">
               <div class="tip-item">
@@ -69,7 +94,7 @@
               </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-4 wow zoomIn">
-              <img class="img-responsive" style="height:350px;margin:0 auto" src="@/assets/img/bg2.png" alt="">
+              <img class="img-responsive" style="height:380px;margin:0 auto;min-width:380px" src="@/assets/img/gg.jpg" alt="">
             </div>
             <div class="col-xs-12 col-sm-12 col-md-4 tip-group">
               <div class="tip-item">
@@ -94,19 +119,7 @@
           </div>
         </div>
       </div>
-      <!-- 第四部分  愿景-->
-      <div id="contactUs" class="container-fuild text-center">
-        <div class="container contactUs-container wow slideInUp">
-          <h1>发展成为服务于全国的大型综合性人力资源服务企业</h1>
-          <h3>—— Comprehensive human resource service enterprise ——</h3>
-          <a href="#" class="btn btn-lg btn-block btn-info" style="background:rgb(186, 154, 81);border:none;width:24%;margin:0 auto">联系我们</a>
-          <div class="contactUs-contactWay">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-      </div>
+   
       <!-- 第五部分 优秀猎头-->
       <div id="customer" class="container-fuild">
         <div class="customer-title text-center">
@@ -154,25 +167,7 @@
         </div>
       </div>
 
-      <!-- 第七部分 我们的成绩-->
-      <div id="ourSuccess">
-        <div class="success-item">
-          <div>1,000 <i>+</i></div>
-          <div>高级猎头顾问</div>
-        </div>
-        <div class="success-item">
-          <div>60,000 <i>+</i></div>
-          <div>精英人才库</div>
-        </div>
-        <div class="success-item">
-          <div>10,238</div>
-          <div>服务客户</div>
-        </div>
-        <div class="success-item">
-          <div>9,016</div>
-          <div>职位案例</div>
-        </div>
-      </div>
+
 
       <!-- 第六部分 我们的服务 -->
       <div id="whyChooseUs" class="other conatiner-fuild">
@@ -188,6 +183,19 @@
               </div>
               <p class="yl-card-text">{{item.title}}</p>
             </div>
+          </div>
+        </div>
+      </div>
+            <!-- 第四部分  愿景-->
+      <div id="contactUs" class="container-fuild text-center">
+        <div class="container contactUs-container wow slideInUp">
+          <h1>发展成为服务于全国的大型综合性人力资源服务企业</h1>
+          <h3>—— Comprehensive human resource service enterprise ——</h3>
+          <a href="#" class="btn btn-lg btn-block btn-info" style="background:rgb(186, 154, 81);border:none;width:24%;margin:0 auto">联系我们</a>
+          <div class="contactUs-contactWay">
+            <span></span>
+            <span></span>
+            <span></span>
           </div>
         </div>
       </div>
@@ -220,30 +228,30 @@ export default {
   data() {
     return {
       swiperList: [
-        {
-          img: require("@/assets/img/banner1.png"),
-          path: "",
-          title: '优化个人职业生涯，助力企业健康发展',
-          content: '',
-        },
-        {
-          img: require("@/assets/img/banner2.png"),
-          path: "",
-          title: '优化个人职业生涯，助力企业健康发展',
-          content: '',
-        },
-        {
-          img: require("@/assets/img/banner3.png"),
-          path: "",
-          title: '优化个人职业生涯，助力企业健康发展',
-          content: '',
-        },
+        // {
+        //   img: require("@/assets/img/bg25.jpg"),
+        //   path: "",
+        //   title: '优化个人职业生涯，助力企业健康发展',
+        //   content: '',
+        // },
         {
           img: require("@/assets/img/banner2.png"),
           path: "",
           title: '优化个人职业生涯，助力企业健康发展',
           content: '',
-        }
+        },
+        // {
+        //   img: require("@/assets/img/banner3.png"),
+        //   path: "",
+        //   title: '优化个人职业生涯，助力企业健康发展',
+        //   content: '',
+        // },
+        // {
+        //   img: require("@/assets/img/banner2.png"),
+        //   path: "",
+        //   title: '优化个人职业生涯，助力企业健康发展',
+        //   content: '',
+        // }
       ],
       customerList: [
         {
@@ -429,6 +437,7 @@ export default {
   padding: 100px 100px 100px 100px;
   transition: all ease 0.6s;
   box-sizing: border-box;
+  /* background: url('../../assets/img/bg25.jpg'); */
 }
 #bigData .whyChooseUs-title {
   margin-bottom: 50px;
@@ -444,9 +453,9 @@ export default {
   border-bottom: 1px solid #ccc;
 }
 #bigData p {
-  font-size: 14px;
+  /* font-size: 14px;
   color: #333;
-  line-height: 2rem;
+  line-height: 2rem; */
 }
 #bigData .bigData-device {
   margin: 50px 0 20px;
@@ -547,27 +556,37 @@ export default {
 /* 为什么选择我们 */
 #whyChooseUs {
   padding: 100px;
-  background: url("../../assets/img/bg1.png") no-repeat center;
+  /* background: url("../../assets/img/bg1.png") no-repeat center; */
 }
 #whyChooseUs.other {
   background: url("../../assets/img/bg3.png") no-repeat center !important;
 }
-#whyChooseUs .whyChooseUs-title {
+ .whyChooseUs-title {
   margin-bottom: 50px;
 }
-#whyChooseUs .whyChooseUs-title p:nth-of-type(1) {
+ .whyChooseUs-title p:nth-of-type(1) {
   font-size: 25px;
   font-weight: 500;
   color: rgb(186, 154, 81);
 }
-#whyChooseUs .whyChooseUs-title p:nth-of-type(2) {
+ .whyChooseUs-title p:nth-of-type(2) {
   font-size: 14px;
+  color: #999797;
 }
 #whyChooseUs .server-block {
-  padding: 70px 20px;
-  border: 1px solid rgb(186, 154, 81);
-  border-bottom: 5px solid rgb(186, 154, 81);
+  padding: 50px 10px 70px 10px;
+  border: 1px solid #e5e5e5;
+  border-top: 5px solid rgb(186, 154, 81);
+  max-height: 330px;
+  box-sizing: border-box;
+  color: #b18147;
+  text-align: center;
+  transition: transform 0.5s;
 }
+#whyChooseUs .server-block:hover {
+  transform: scale3d(1.1, 1.1, 1);
+}
+
 #whyChooseUs .server-block img {
   width: 60px;
   height: 60px;
@@ -577,8 +596,22 @@ export default {
   margin: 30px 0;
 }
 #whyChooseUs .server-block > div {
-  color: #ccc;
+  color: #666;
 }
+
+#whyChooseUs .server-block .service-btn {
+  display: inline-block;
+  height: 34px;
+  border-radius: 4px;
+  background: #b18147;
+  color: #ffffff;
+  line-height: 34px;
+  text-align: center;
+  padding: 0 20px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
 /* 媒体查询（手机） */
 @media screen and (max-width: 768px) {
   #swiper {

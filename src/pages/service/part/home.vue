@@ -656,7 +656,7 @@ export default {
   min-height: 450px;
   padding: 40px 0;
   background: #ffffff;
-  background-image: url("../../../assets/img/bg1.png");
+  background-image: url("../../../assets/img/bg21.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
