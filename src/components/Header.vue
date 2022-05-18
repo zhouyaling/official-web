@@ -1,11 +1,11 @@
 <template>
   <!-- 头部整体盒子 -->
-  <div id="header" class="container-fuild">
+  <div id="header" class="container-fuild" :class="subTitle ? 'spec' : ''">
     <!-- 头部顶部 -->
     <!-- <div class="header-top container-fuild hidden-xs">
       <div class="container">
         <div class="server pull-left">
-          <span class="glyphicon glyphicon-earphone"></span>15178726577
+          <span class="glyphicon glyphicon-earphone"></span>032-65259611
           <span class="glyphicon glyphicon-envelope"></span>邮箱：675209079@qq.com
           <span class="glyphicon glyphicon-time"></span>7x24小时为您服务
         </div>
@@ -20,44 +20,73 @@
       <!-- 导航logo -->
       <div class="header-nav-logo">
         <a href="index.html">
-          <img style="height:80px" src="@/assets/img/logo_black.png">
-          <img style="height:56px;left:110px;" src="@/assets/img/logo-text.png">
+          <img style="height: 66px" src="@/assets/img/logo_small.png" />
+          <img
+            style="height: 56px; left: 110px"
+            src="@/assets/img/logo-text.png"
+          />
         </a>
       </div>
       <!-- 导航内容 -->
       <ul class="header-nav-wrapper">
-        <li v-for="(item,index) in navList" :key="index" :class="index==navIndex?'active':''" @click="navClick(index,item.name)">
+        <li
+          v-for="(item, index) in navList"
+          :key="index"
+          :class="index == navIndex ? 'active' : ''"
+          @click="navClick(index, item.name)"
+        >
           <!-- <router-link :to="item.path"> -->
           <a :href="item.path" rel="noopener noreferrer">
-            {{item.name}}
-            <span v-if="item.children.length>0" class="glyphicon glyphicon-menu-down"></span>
+            {{ item.name }}
+            <span
+              v-if="item.children.length > 0"
+              class="glyphicon glyphicon-menu-down"
+            ></span>
             <i class="underline"></i>
           </a>
           <!-- </router-link> -->
         </li>
       </ul>
       <div class="hot-phone">
-        <span class="phone-text"><span class=" glyphicon glyphicon-earphone "></span>企业咨询热线</span>
-        <span class="phone-number">15178726577</span>
+        <span class="phone-text"
+          ><span class="glyphicon glyphicon-earphone"></span>企业咨询热线</span
+        >
+        <span class="phone-number">032 - 65259611</span>
       </div>
     </div>
     <!-- 手机导航 -->
     <div class="header-nav-m container-fuild visible-xs">
       <div class="header-nav-m-logo">
-        <img class="center-block" src="@/assets/img/logo_black.png" alt="logo">
+        <img
+          class="center-block"
+          src="@/assets/img/logo_small.png"
+          alt="logo"
+        />
       </div>
       <!-- 导航栏 -->
       <div class="header-nav-m-menu text-center">
-        {{menuName}}
-        <div class="header-nav-m-menu-wrapper" data-toggle="collapse" data-target="#menu" @click="menuClick">
+        {{ menuName }}
+        <div
+          class="header-nav-m-menu-wrapper"
+          data-toggle="collapse"
+          data-target="#menu"
+          @click="menuClick"
+        >
           <span :class="menuClass"></span>
         </div>
         <!-- 导航内容 -->
         <ul id="menu" class="header-nav-m-wrapper collapse">
-          <li v-for="(item,index) in navList" :key="index" :class="index==navIndex?'active':''" @click="navClick(index,item.name)" data-toggle="collapse" data-target="#menu">
+          <li
+            v-for="(item, index) in navList"
+            :key="index"
+            :class="index == navIndex ? 'active' : ''"
+            @click="navClick(index, item.name)"
+            data-toggle="collapse"
+            data-target="#menu"
+          >
             <!-- <router-link :to="item.path"> -->
             <a :href="item.path" rel="noopener noreferrer">
-              {{item.name}}
+              {{ item.name }}
               <i class="underline"></i>
             </a>
             <!-- </router-link> -->
@@ -70,38 +99,46 @@
 <script>
 export default {
   name: "Header",
+  props: {
+    subTitle: {
+      type: Boolean,
+      default: false,
+    },
+  },
   data() {
     return {
-      navIndex: sessionStorage.getItem('navIndex') ? sessionStorage.getItem('navIndex') : 0,
+      navIndex: sessionStorage.getItem("navIndex")
+        ? sessionStorage.getItem("navIndex")
+        : 0,
       menuName: "首页",
       menuClass: "glyphicon glyphicon-menu-down",
       navList: [
         {
           name: "首页",
           path: "index.html",
-          children: []
+          children: [],
         },
         {
           name: "公司介绍",
           path: "aboutus.html",
-          children: []
+          children: [],
         },
         {
           name: "产品介绍",
           path: "service.html",
-          children: []
+          children: [],
         },
         {
           name: "新闻动态",
           path: "news.html",
-          children: []
+          children: [],
         },
         {
           name: "联系我们",
           path: "contact.html",
-          children: []
-        }
-      ]
+          children: [],
+        },
+      ],
     };
   },
   methods: {
@@ -116,11 +153,11 @@ export default {
       return strURL;
     },
     goHome() {
-      this.$router.push('/home')
+      this.$router.push("/home");
     },
     navClick(index, name) {
       this.navIndex = index;
-      sessionStorage.setItem('navIndex', index)
+      sessionStorage.setItem("navIndex", index);
       this.menuName = name;
     },
     menuClick() {
@@ -129,16 +166,25 @@ export default {
       } else {
         this.menuClass = "glyphicon glyphicon-menu-down";
       }
-    }
-  }
+    },
+  },
 };
 </script>
 <style scoped>
 /* 顶部 */
 #header {
-  background: #f4f4f4;
-  /* background: #282828; */
+  /* background: #f4f4f4; */
+  background-color: rgba(40,40,40,0.35);
   transition: all ease 0.6s;
+  background-image: url('../assets/img/bg33.png');
+}
+.container-fuild.spec {
+  position: absolute;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  background-color: transparent!important;
+  background-image: none!important;
 }
 #header .header-top {
   height: 50px;
@@ -365,7 +411,7 @@ export default {
   justify-content: flex-start;
   flex-direction: column;
   position: absolute;
-  right: 0px;
+  right: 15px;
   top: 30px;
 }
 

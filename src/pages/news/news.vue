@@ -1,30 +1,44 @@
 <template>
   <page-layout>
     <div slot="page" id="NewsInformation">
+      <div class="banner container-fuild text-center">行业动态</div>
       <div class="container container1">
-        <div class="container1 text-center color-orange">
+        <!-- <div class="container1 text-center color-orange">
           <h3>行业动态</h3>
-          <p style="color:#b2b2b2">Industry Dynamics</p>
-        </div>
+          <p style="color: #b2b2b2">Industry Dynamics</p>
+        </div> -->
         <div class="news-top3">
-          <div class="news-card" v-for="(item,index) in 3" :key="index">
+          <div class="news-card" v-for="(item, index) in 3" :key="index">
             <div class="news-card-img">
-              <img src="@/assets/img/img12.png" alt="">
+              <img src="@/assets/img/img12.png" alt="" />
             </div>
             <div class="news-card-content">
-              <div class="news-card-tilte">Vue.js 是一个用于构建客户端应用的框架</div>
-              <div class="news-card-sub">默认情况下，Vue 组件在浏览器中生成和操作 DOM 作为输出。然而，我们也可以将相同的组件在服务端渲染成 HTML 字符串，直接返回给浏览器</div>
+              <div class="news-card-tilte">
+                Vue.js 是一个用于构建客户端应用的框架
+              </div>
+              <div class="news-card-sub">
+                默认情况下，Vue 组件在浏览器中生成和操作 DOM
+                作为输出。然而，我们也可以将相同的组件在服务端渲染成 HTML
+                字符串，直接返回给浏览器
+              </div>
             </div>
           </div>
         </div>
         <div class="news-list">
-          <div class="news-item" v-for="(item,index) in 6" :key="index">
+          <div class="news-item" v-for="(item, index) in 6" :key="index">
             <div class="news-item-img">
-              <img src="@/assets/img/img11.png" alt="">
+              <img src="@/assets/img/img11.png" alt="" />
             </div>
             <div class="news-item-content">
-              <div class="news-title">Vue.js 是一个用于构建客户端应用的框架</div>
-              <div class="news-detail">默认情况下，Vue 组件在浏览器中生成和操作 DOM 作为输出。然而，我们也可以将相同的组件在服务端渲染成 HTML 字符串，直接返回给浏览器，最后再将静态的 HTML “激活” (hydrate) 为完全交互式的客户端应用。</div>
+              <div class="news-title">
+                Vue.js 是一个用于构建客户端应用的框架
+              </div>
+              <div class="news-detail">
+                默认情况下，Vue 组件在浏览器中生成和操作 DOM
+                作为输出。然而，我们也可以将相同的组件在服务端渲染成 HTML
+                字符串，直接返回给浏览器，最后再将静态的 HTML “激活” (hydrate)
+                为完全交互式的客户端应用。
+              </div>
             </div>
             <div class="news-item-time">
               <span>18</span>
@@ -37,21 +51,19 @@
   </page-layout>
 </template>
 <script>
-import pageLayout from '@/components/pageView.vue'
-import { WOW } from 'wowjs';
+import pageLayout from "@/components/pageView.vue";
+import { WOW } from "wowjs";
 export default {
-  name: 'NewsInformation',
+  name: "NewsInformation",
   components: { pageLayout },
   data() {
-    return {
-
-    }
+    return {};
   },
   mounted() {
     var wow = new WOW();
     wow.init();
   },
-}
+};
 </script>
 <style scoped>
 .nav {
@@ -224,7 +236,7 @@ export default {
   color: #666666;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: pre-wrap;
+  /* white-space: pre-wrap; */
 }
 
 .news-item-content .news-title {
@@ -265,7 +277,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
-    margin: 40px 0 50px 0;
+  margin: 40px 0 50px 0;
 }
 
 .news-top3 .news-card {
@@ -278,8 +290,8 @@ export default {
   overflow: hidden;
 }
 
-.news-top3 .news-card:hover{
-  transform: scale3d(1.1,1.1,1);
+.news-top3 .news-card:hover {
+  transform: scale3d(1.1, 1.1, 1);
 }
 
 .news-card .news-card-img {
@@ -329,32 +341,44 @@ export default {
     display: none;
   }
 
-  .news-item{
+  .news-item {
     height: 150px;
   }
-  .news-item .news-item-img{
+  .news-item .news-item-img {
     width: 100px;
   }
-  .news-item .news-item-content{
+  .news-item .news-item-content {
     width: calc(100% - 100px);
   }
-  .news-item .news-detail{
+  .news-item .news-detail {
     display: none;
   }
-  .news-item .news-item-time{
+  .news-item .news-item-time {
     width: 60px;
     height: 60px;
     font-size: 12px;
     right: 0px;
   }
 
-  .news-top3{
+  .news-top3 {
     flex-direction: column;
   }
-  .news-top3 .news-card{
+  .news-top3 .news-card {
     width: 82%;
     margin-bottom: 30px;
   }
+}
+
+.banner {
+  color: #fff;
+  font-size: 30px;
+  height: 150px;
+  line-height: 150px;
+  background-image: url("../../assets/img/banner1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center center;
 }
 </style>
 

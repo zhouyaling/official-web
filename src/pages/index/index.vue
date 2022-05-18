@@ -1,15 +1,20 @@
 <template>
-  <page-layout>
+  <page-layout :subTitle="true">
     <div slot="page" id="HomePage">
       <!-- 轮播图 -->
       <div id="swiper" class="container-fuild">
         <div class="swiper-container banner-swiper">
           <div class="swiper-wrapper">
-            <div class="swiper-slide" v-for="(item,index) in swiperList" :key="index">
-              <img class="swiper-lazy" :data-src="item.img" alt="轮播图">
+            <div
+              class="swiper-slide"
+              v-for="(item, index) in swiperList"
+              :key="index"
+            >
+              <img class="swiper-lazy" :data-src="item.img" alt="轮播图" />
               <div class="swiper-lazy-preloader"></div>
               <div class="swiper-slide-title">
-                <h1>{{item.title}}</h1>
+                <h1>{{ item.title }}</h1>
+                <h3>Optimize personal career, Help enterprise development</h3>
               </div>
             </div>
           </div>
@@ -21,8 +26,227 @@
           <div class="swiper-button-next yl-swiper-next"></div>
         </div>
       </div>
+      <!-- 第七部分 我们的成绩-->
+      <!-- <div id="ourSuccess">
+        <div class="success-item">
+          <div>1,000 <i>+</i></div>
+          <div>高级猎头顾问</div>
+        </div>
+        <div class="success-item">
+          <div>60,000 <i>+</i></div>
+          <div>精英人才库</div>
+        </div>
+        <div class="success-item">
+          <div>10,238</div>
+          <div>服务客户</div>
+        </div>
+        <div class="success-item">
+          <div>9,016</div>
+          <div>职位案例-</div>
+        </div>
+      </div> -->
 
-         <!-- 第七部分 我们的成绩-->
+      <!-- 第二部分 主营业务-->
+      <div id="whyChooseUs" class="conatiner-fuild">
+        <div class="container">
+          <div class="whyChooseUs-title text-center">
+            <p>主营业务</p>
+            <p>—— MAIN BUSINESS ——</p>
+          </div>
+          <div class="row">
+            <div
+              class="col-xs-12 col-sm-6 col-md-3 server-wrapper"
+              v-for="(item, index) in serverList"
+              :key="index"
+            >
+              <div class="server-block wow slideInUp">
+                <img class="center-block" :src="item.logo" alt="logo" />
+                <p class="text-center">{{ item.title }}</p>
+                <div class="text-center" v-html="item.content"></div>
+                <a href="service.html" rel="noopener noreferrer">
+                  <div class="service-btn">查看详情</div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 第四部分  愿景-->
+      <div id="contactUs" class="container-fuild text-center">
+        <div class="container contactUs-container wow slideInUp">
+          <h1>发展成为服务于全国的大型综合性人力资源服务企业</h1>
+          <h3>
+            —— Develop into a large-scale comprehensive enterprise serving the
+            whole country ——
+          </h3>
+          <a
+            href="#"
+            class="btn btn-lg btn-block btn-info"
+            style="
+              background: rgb(186, 154, 81);
+              border: none;
+              width: 24%;
+              margin: 0 auto;
+            "
+            >联系我们</a
+          >
+          <div class="contactUs-contactWay">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 第三部分 公司优势-->
+      <div id="bigData" class="container-fuild">
+        <div class="container">
+          <div class="whyChooseUs-title text-center">
+            <p class="">核心价值观</p>
+            <p>—— Why choose us ——</p>
+          </div>
+          <!-- <img src="@/assets/img/bg22.png" alt="">
+          <img src="@/assets/img/bg27.png" alt=""> -->
+          <div class="row bigData-container">
+            <div class="col-xs-12 col-sm-12 col-md-4 tip-group">
+              <div class="tip-item">
+                <div class="tip-img">
+                  <img src="@/assets/img/icon1.png" alt="" />
+                </div>
+                <div class="tip-text">
+                  <div class="tip-title">客户是最重要的伙伴</div>
+                  <div class="tip-subtitle">
+                    客户组织是我们最关键的客户,始终坚持客户需求第一、客户利益第一和客户满意第一
+                  </div>
+                </div>
+              </div>
+              <div class="tip-item">
+                <div class="tip-img">
+                  <img src="@/assets/img/icon1.png" alt="" />
+                </div>
+                <div class="tip-text">
+                  <div class="tip-title">能力对等、价值对等</div>
+                  <div class="tip-subtitle">
+                    实现客户价值最大化和开发客户终生价值为目标，全方位的为客户创造全新服务、全新价值
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 wow zoomIn">
+              <img
+                class="img-responsive"
+                style="height: 380px; margin: 0 auto; min-width: 380px"
+                src="@/assets/img/gg.jpg"
+                alt=""
+              />
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 tip-group">
+              <div class="tip-item">
+                <div class="tip-img">
+                  <img src="@/assets/img/icon1.png" alt="" />
+                </div>
+                <div class="tip-text">
+                  <div class="tip-title">锐意进取</div>
+                  <div class="tip-subtitle">
+                    基于对人力资源招聘市场的深入了解,结合在众多行业及业务的专业经验，设定满足本地文化及差异性需求的专业招聘方法
+                  </div>
+                </div>
+              </div>
+              <div class="tip-item">
+                <div class="tip-img">
+                  <img src="@/assets/img/icon1.png" alt="" />
+                </div>
+                <div class="tip-text">
+                  <div class="tip-title">动态高效</div>
+                  <div class="tip-subtitle">
+                    提供高效的招聘体验、丰富的候选人资源、专业的猎头服务
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 第五部分 优秀猎头-->
+      <div id="customer" class="container-fuild">
+        <div class="whyChooseUs-title text-center">
+          <p>优秀猎头</p>
+          <p>—— Excellent headhunter ——</p>
+        </div>
+        <div class="container customer-container">
+          <div class="swiper-container customer-swiper hidden-xs">
+            <div class="swiper-wrapper">
+              <div
+                class="swiper-slide customer-block"
+                v-for="(item, index) in customerList"
+                :key="index"
+              >
+                <div class="customer-logo">
+                  <img class="center-block" :src="item.logo" alt="logo" />
+                </div>
+                <div class="customer-yh"></div>
+                <div class="customer-content-name">
+                  <p>XueHao 高级人力资源师</p>
+                </div>
+                <div class="customer-content1">
+                  <p>
+                    人力资源协会执行会长、企业家协
+                    会执行会长。曾任上市集团人力资源 总监、投资发展总监
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+          <div class="row visible-xs customer-block">
+            <div
+              class="col-xs-12"
+              v-for="(item, index) in customerList"
+              :key="index"
+            >
+              <div class="customer-logo">
+                <img class="center-block" :src="item.logo" alt="logo" />
+              </div>
+              <div class="customer-yh">
+                <img src="@/assets/img/yinhao.png" alt="引号" />
+              </div>
+              <div class="customer-content-name">
+                <p>XueHao 高级人力资源师</p>
+              </div>
+              <div class="customer-content2">
+                <small>{{ item.title }}</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 第六部分 我们的服务 -->
+      <div id="whyChooseUs" class="other conatiner-fuild">
+        <div class="container">
+          <div class="whyChooseUs-title text-center">
+            <p>我们的责任</p>
+            <p class="yl-sub-title">—— our responsibility ——</p>
+          </div>
+          <div class="row">
+            <div
+              class="col-xs-12 col-sm-6 col-md-3 server-wrapper"
+              v-for="(item, index) in serverList1"
+              :key="index"
+            >
+              <div class="yl-img-box">
+                <img :src="item.logo" alt="" />
+              </div>
+              <p class="yl-card-text">{{ item.title }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 第七部分 我们的成绩-->
       <div id="ourSuccess">
         <div class="success-item">
           <div>1,000 <i>+</i></div>
@@ -41,164 +265,6 @@
           <div>职位案例-</div>
         </div>
       </div>
-
-      <!-- 第二部分 主营业务-->
-      <div id="whyChooseUs" class="conatiner-fuild">
-        <div class="container">
-          <div class="whyChooseUs-title text-center">
-            <p>主营业务</p>
-            <p>——  WE ARE MOST PROUD OF, IT IS HAS BEEN “FOCUS” ——</p>
-          </div>
-          <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-3 server-wrapper" v-for="(item,index) in serverList" :key="index">
-              <div class="server-block wow slideInUp">
-                <img class="center-block" :src="item.logo" alt="logo">
-                <p class="text-center">{{item.title}}</p>
-                <div class="text-center" v-html="item.content"></div>
-                <a href="service.html" rel="noopener noreferrer">
-                  <div class="service-btn">查看详情</div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- 第三部分 公司优势-->
-      <div id="bigData" class="container-fuild">
-        <div class="container">
-          <div class="whyChooseUs-title text-center">
-            <p class="">核心价值观</p>
-            <p>—— WE ARE MOST PROUD OF, IT IS HAS BEEN “FOCUS”——</p>
-          </div>
-          <!-- <img src="@/assets/img/bg22.png" alt="">
-          <img src="@/assets/img/bg27.png" alt=""> -->
-          <div class="row bigData-container">
-            <div class="col-xs-12 col-sm-12 col-md-4 tip-group">
-              <div class="tip-item">
-                <div class="tip-img">
-                  <img src="@/assets/img/icon1.png" alt="">
-                </div>
-                <div class="tip-text">
-                  <div class="tip-title">客户是最重要的伙伴</div>
-                  <div class="tip-subtitle">服务流程快服务流程快服务服务流程快服务流程快服务流程快流程快</div>
-                </div>
-              </div>
-              <div class="tip-item">
-                <div class="tip-img">
-                  <img src="@/assets/img/icon1.png" alt="">
-                </div>
-                <div class="tip-text">
-                  <div class="tip-title">能力对等、价值对等</div>
-                  <div class="tip-subtitle">服务流程快服务流程快服务服务流程快服务流程快服务流程快流程快</div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-4 wow zoomIn">
-              <img class="img-responsive" style="height:380px;margin:0 auto;min-width:380px" src="@/assets/img/gg.jpg" alt="">
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-4 tip-group">
-              <div class="tip-item">
-                <div class="tip-img">
-                  <img src="@/assets/img/icon1.png" alt="">
-                </div>
-                <div class="tip-text">
-                  <div class="tip-title">锐意进取</div>
-                  <div class="tip-subtitle">服务流程快服务流程快服务服务流程快服务流程快服务流程快流程快</div>
-                </div>
-              </div>
-              <div class="tip-item">
-                <div class="tip-img">
-                  <img src="@/assets/img/icon1.png" alt="">
-                </div>
-                <div class="tip-text">
-                  <div class="tip-title">动态高效</div>
-                  <div class="tip-subtitle">服务流程快服务流程快服务服务流程快服务流程快服务流程快流程快</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-   
-      <!-- 第五部分 优秀猎头-->
-      <div id="customer" class="container-fuild">
-        <div class="customer-title text-center">
-          <p>优秀猎头</p>
-          <p>—— WE ARE MOST PROUD OF, IT IS HAS BEEN “FOCUS”——</p>
-        </div>
-        <div class="container customer-container">
-          <div class="swiper-container customer-swiper hidden-xs">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide customer-block" v-for="(item,index) in customerList" :key="index">
-                <div class="customer-logo">
-                  <img class="center-block" :src="item.logo" alt="logo">
-                </div>
-                <div class="customer-yh">
-                </div>
-                <div class="customer-content-name">
-                  <p>XueHao 高级人力资源师</p>
-                </div>
-                <div class="customer-content1">
-                  <p>人力资源协会执行会长、企业家协
-                    会执行会长。曾任上市集团人力资源
-                    总监、投资发展总监</p>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-          </div>
-          <div class="row visible-xs customer-block">
-            <div class="col-xs-12" v-for="(item,index) in customerList" :key="index">
-              <div class="customer-logo">
-                <img class="center-block" :src="item.logo" alt="logo">
-              </div>
-              <div class="customer-yh">
-                <img src="@/assets/img/yinhao.png" alt="引号">
-              </div>
-              <div class="customer-content-name">
-                <p>XueHao 高级人力资源师</p>
-              </div>
-              <div class="customer-content2">
-                <small>{{item.title}}</small>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-
-      <!-- 第六部分 我们的服务 -->
-      <div id="whyChooseUs" class="other conatiner-fuild">
-        <div class="container">
-          <div class="whyChooseUs-title text-center">
-            <p>我们的责任</p>
-            <p class="yl-sub-title">—— WE ARE MOST PROUD OF, IT IS HAS BEEN “FOCUS”——</p>
-          </div>
-          <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-3 server-wrapper" v-for="(item,index) in serverList1" :key="index">
-              <div class="yl-img-box">
-                <img :src="item.logo" alt="">
-              </div>
-              <p class="yl-card-text">{{item.title}}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-            <!-- 第四部分  愿景-->
-      <div id="contactUs" class="container-fuild text-center">
-        <div class="container contactUs-container wow slideInUp">
-          <h1>发展成为服务于全国的大型综合性人力资源服务企业</h1>
-          <h3>—— Comprehensive human resource service enterprise ——</h3>
-          <a href="#" class="btn btn-lg btn-block btn-info" style="background:rgb(186, 154, 81);border:none;width:24%;margin:0 auto">联系我们</a>
-          <div class="contactUs-contactWay">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-      </div>
       <!-- 第七部分 合作伙伴 -->
       <div id="whyChooseUs" class="other conatiner-fuild">
         <div class="container">
@@ -207,9 +273,12 @@
             <p class="yl-sub-title">—— Our Best Partner ——</p>
           </div>
           <div class="row row-logo">
-            <div class="row-logo-item" v-for="(item,index) in 10" :key="index">
+            <div class="row-logo-item" v-for="(item, index) in 10" :key="index">
               <div class="partner-img-box">
-                <img :src="require('../../assets/img/logo' + item +'.png')" alt="">
+                <img
+                  :src="require('../../assets/img/logo' + item + '.png')"
+                  alt=""
+                />
               </div>
             </div>
           </div>
@@ -219,9 +288,9 @@
   </page-layout>
 </template>
 <script>
-import pageLayout from '@/components/pageView.vue'
+import pageLayout from "@/components/pageView.vue";
 import Swiper from "swiper";
-import { WOW } from 'wowjs';
+import { WOW } from "wowjs";
 export default {
   name: "HomePage",
   components: { pageLayout },
@@ -235,17 +304,17 @@ export default {
         //   content: '',
         // },
         {
-          img: require("@/assets/img/banner2.png"),
+          img: require("@/assets/img/ii.jpg"),
           path: "",
-          title: '优化个人职业生涯，助力企业健康发展',
-          content: '',
+          title: "优化个人职业生涯，助力企业健康发展",
+          content: "",
         },
-        // {
-        //   img: require("@/assets/img/banner3.png"),
-        //   path: "",
-        //   title: '优化个人职业生涯，助力企业健康发展',
-        //   content: '',
-        // },
+        {
+          img: require("@/assets/img/bg25.jpg"),
+          path: "",
+          title: "优化个人职业生涯，助力企业健康发展",
+          content: "",
+        },
         // {
         //   img: require("@/assets/img/banner2.png"),
         //   path: "",
@@ -258,31 +327,26 @@ export default {
           logo: require("@/assets/img/img15.png"),
           title:
             "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
-
         },
         {
           logo: require("@/assets/img/img15.png"),
           title:
             "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
-
         },
         {
           logo: require("@/assets/img/img15.png"),
           title:
             "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
-
         },
         {
           logo: require("@/assets/img/img15.png"),
           title:
             "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
-
         },
         {
           logo: require("@/assets/img/img15.png"),
           title:
             "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
-
         },
         {
           logo: require("@/assets/img/img15.png"),
@@ -294,23 +358,23 @@ export default {
         {
           logo: require("@/assets/img/tel.png"),
           title: "蓝领用工服务",
-          content: "<p>为企业提供蓝领用工整体解决方案"
+          content: "<p>为企业提供蓝领用工整体解决方案",
         },
         {
           logo: require("@/assets/img/computer.png"),
           title: "猎头服务",
-          content: "<p>为企业提供中高端人才招聘解决方案"
+          content: "<p>为企业提供中高端人才招聘解决方案",
         },
         {
           logo: require("@/assets/img/qq.png"),
           title: "人事岗位外包服务",
-          content: "<p>3、为企业提供专业人资模块解决方案"
+          content: "<p>3、为企业提供专业人资模块解决方案",
         },
         {
           logo: require("@/assets/img/skill.png"),
           title: "职业咨询服务",
-          content: "<p>为个人提供职业咨询、规划服务"
-        }
+          content: "<p>为个人提供职业咨询、规划服务",
+        },
       ],
       serverList1: [
         {
@@ -328,7 +392,7 @@ export default {
         {
           logo: require("@/assets/img/img14.png"),
           title: "高效完成委托项目",
-        }
+        },
       ],
     };
   },
@@ -336,29 +400,30 @@ export default {
     /* banner-swiper */
     new Swiper(".banner-swiper", {
       loop: true, // 循环模式选项
-      effect: 'fade',
+      effect: "fade",
       //自动播放
+      speed: 1000,
       autoplay: {
-        delay: 3000,
+        delay: 5000,
         stopOnLastSlide: false,
-        disableOnInteraction: false
+        disableOnInteraction: false,
       },
       // 如果需要分页器
       pagination: {
         el: ".swiper-pagination",
-        clickable: true
+        clickable: true,
       },
       // 如果需要前进后退按钮
       navigation: {
         nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev"
+        prevEl: ".swiper-button-prev",
       },
       // 延迟加载
       lazy: {
-        loadPrevNext: true
+        loadPrevNext: true,
       },
       observer: true, //修改swiper自己或子元素时，自动初始化swiper
-      observeParents: true //修改swiper的父元素时，自动初始化swiper
+      observeParents: true, //修改swiper的父元素时，自动初始化swiper
     });
     /* customer-swiper */
     new Swiper(".customer-swiper", {
@@ -366,28 +431,28 @@ export default {
       slidesPerView: 3,
       //自动播放
       autoplay: {
-        delay: 3000,
+        delay: 5000,
         stopOnLastSlide: false,
-        disableOnInteraction: false
+        disableOnInteraction: false,
       },
       // 如果需要前进后退按钮
       navigation: {
         nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev"
+        prevEl: ".swiper-button-prev",
       },
       observer: true, //修改swiper自己或子元素时，自动初始化swiper
-      observeParents: true //修改swiper的父元素时，自动初始化swiper
+      observeParents: true, //修改swiper的父元素时，自动初始化swiper
     });
     /* wowjs动画 */
     var wow = new WOW({
-      boxClass: 'wow',
-      animateClass: 'animated',
+      boxClass: "wow",
+      animateClass: "animated",
       offset: 0,
       mobile: true,
-      live: true
-    })
+      live: true,
+    });
     wow.init();
-  }
+  },
 };
 </script>
 <style scoped>
@@ -398,7 +463,8 @@ export default {
 
 /* 轮播图 */
 #swiper {
-  height: 600px;
+  /* height: 600px; */
+  height: 820px;
 }
 #swiper .banner-swiper {
   width: 100%;
@@ -407,7 +473,25 @@ export default {
 #swiper .banner-swiper .swiper-slide img {
   width: 100%;
   height: 100%;
+  transition: 1s linear 1s;
+  transform: scale(1.04, 1.04);
 }
+
+/* .swiper-slide img {
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  transition: 1s linear 2s;
+  transform: scale(1.1, 1.1);
+} */
+
+
+#swiper .banner-swiper .swiper-slide-active img,
+#swiper .banner-swiper .swiper-slide-duplicate-active img {
+  transition: 1.5s linear;
+  transform: scale(1, 1);
+}
+
 #swiper .banner-swiper .swiper-slide {
   position: relative;
 }
@@ -419,14 +503,24 @@ export default {
   width: 100%;
   height: 100%;
   color: rgba(255, 255, 255, 0.6);
-  background: rgba(51, 51, 51, 0.434);
+  /* background: rgba(51, 51, 51, 0.434); */
   text-align: center;
   line-height: 80px;
 }
 #swiper .banner-swiper .swiper-slide-title > h1 {
-  font-size: 40px;
-  margin-top: 15%;
+  font-size: 45px;
+  margin-top: 18%;
+  color: rgb(253, 178, 34, 0.8);
+  font-weight: 600;
+  font-family: 微软雅黑;
 }
+
+#swiper .banner-swiper .swiper-slide-title > h3 {
+  font-size: 26px;
+  color: rgb(229, 229, 229);
+  font-family: 微软雅黑;
+}
+
 #swiper .banner-swiper .swiper-slide-title > p {
   font-size: 20px;
   margin-top: 1%;
@@ -437,7 +531,7 @@ export default {
   padding: 100px 100px 100px 100px;
   transition: all ease 0.6s;
   box-sizing: border-box;
-  /* background: url('../../assets/img/bg25.jpg'); */
+  /* background: url('../../assets/img/hh.jpg'); */
 }
 #bigData .whyChooseUs-title {
   margin-bottom: 50px;
@@ -558,18 +652,19 @@ export default {
   padding: 100px;
   /* background: url("../../assets/img/bg1.png") no-repeat center; */
 }
+
 #whyChooseUs.other {
-  background: url("../../assets/img/bg3.png") no-repeat center !important;
+  /* background: url("../../assets/img/bg24.jpg") no-repeat center !important; */
 }
- .whyChooseUs-title {
+.whyChooseUs-title {
   margin-bottom: 50px;
 }
- .whyChooseUs-title p:nth-of-type(1) {
+.whyChooseUs-title p:nth-of-type(1) {
   font-size: 25px;
   font-weight: 500;
   color: rgb(186, 154, 81);
 }
- .whyChooseUs-title p:nth-of-type(2) {
+.whyChooseUs-title p:nth-of-type(2) {
   font-size: 14px;
   color: #999797;
 }
@@ -702,6 +797,9 @@ export default {
     margin-top: 22%;
     display: none;
   }
+   #swiper .banner-swiper .swiper-slide-title > h3 {
+    display: none;
+  }
   #ourSuccess .success-item {
     width: 25% !important;
   }
@@ -760,6 +858,13 @@ export default {
   #ourSuccess .success-item > div:nth-of-type(1) {
     font-size: 20px !important;
   }
+
+    #swiper .banner-swiper .swiper-slide-title > h1 {
+    display: none;
+  }
+   #swiper .banner-swiper .swiper-slide-title > h3 {
+    display: none;
+  }
 }
 
 .yl-card-text {
@@ -793,7 +898,7 @@ export default {
 }
 
 .row-logo {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
@@ -806,7 +911,7 @@ export default {
 }
 
 .partner-img-box {
-  width: 80px;
+  width: 200px;
   height: 80px;
   display: flex;
   align-items: center;
@@ -815,8 +920,8 @@ export default {
 }
 
 .partner-img-box img {
-  width: 100%;
-  height: auto;
+  height: 100%;
+  width: auto;
 }
 
 .visible-xs > div:nth-of-type(odd) {
@@ -858,7 +963,7 @@ export default {
 
 #ourSuccess {
   width: 100%;
-  height: 160px;
+  height: 140px;
   /* background: #bba574; */
   background: rgb(186, 154, 81);
   display: flex;
@@ -871,7 +976,8 @@ export default {
   text-align: center;
 }
 #ourSuccess .success-item > div:nth-of-type(1) {
-  font-size: 36px;
+  font-size: 42px;
+  font-weight: 600;
 }
 #ourSuccess .success-item > div:nth-of-type(1) i {
   font-size: 18px;

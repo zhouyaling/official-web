@@ -14,7 +14,7 @@
       <span>邮箱：675209079@qq.com</span>
     </p>
      <p class="email_wx">
-      <span>Tel：15178726577</span>
+      <span>032-65259611</span>
     </p>
     <p class="copy">Copyright &copy; 2022 重庆森舟企业管理咨询有限公司</p>
   </div>

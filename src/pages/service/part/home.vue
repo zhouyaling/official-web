@@ -1,10 +1,11 @@
 <template>
   <page-layout style="">
     <div slot="page" class="test" id="Service">
-      <div class="container text-center color-orange">
+        <div class="banner container-fuild text-center">我们的服务</div>
+      <!-- <div class="container text-center color-orange">
         <h3>我们的服务</h3>
         <p style="color: #b2b2b2">The Best Service You Never See</p>
-      </div>
+      </div> -->
       <div class="container">
         <div class="Service-container row">
           <div class="Service-item col-xs-12 col-sm-6 col-md-3 wow slideInUp" v-for="(item, index) in serviceList" :key="index">
@@ -140,7 +141,7 @@
                   </div>
                 </div>
               </div>
-              <div class="contact-btn">电话咨询：15178726577</div>
+              <div class="contact-btn">电话咨询：032-65259611</div>
             </div>
           </div>
           <div class="service-wrapper-item" :class="{ active: currentWrapper === 3 }">
@@ -160,7 +161,7 @@
                   </div>
                 </div>
               </div>
-              <div class="contact-btn">电话咨询：15178726577</div>
+              <div class="contact-btn">电话咨询：032-65259611</div>
             </div>
           </div>
         </div>
@@ -777,6 +778,48 @@ export default {
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: 100% 25%;
+}
+
+.banner {
+  color: #fff;
+  font-size: 30px;
+  height: 150px;
+  line-height: 150px;
+  background-image: url("../../../assets/img/banner_2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center center;
+}
+
+/* 媒体查询（手机） */
+@media screen and (max-width: 768px) {
+  .service-nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .service-nav .service-nav-item{
+    width: 48%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+
+  .service-intro-list{
+     justify-content: space-between;
+  }
+
+  .service-intro-list span{
+     width: 30%;
+     margin: 0;
+  }
+}
+
+/* 媒体查询（平板） */
+@media screen and (min-width: 768px) and (max-width: 996px) {
 }
 </style>
 
