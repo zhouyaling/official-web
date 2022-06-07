@@ -5,11 +5,7 @@
       <div id="swiper" class="container-fuild">
         <div class="swiper-container banner-swiper">
           <div class="swiper-wrapper">
-            <div
-              class="swiper-slide"
-              v-for="(item, index) in swiperList"
-              :key="index"
-            >
+            <div class="swiper-slide" v-for="(item, index) in swiperList" :key="index">
               <img class="swiper-lazy" :data-src="item.img" alt="轮播图" />
               <div class="swiper-lazy-preloader"></div>
               <div class="swiper-slide-title">
@@ -54,11 +50,7 @@
             <p>—— MAIN BUSINESS ——</p>
           </div>
           <div class="row">
-            <div
-              class="col-xs-12 col-sm-6 col-md-3 server-wrapper"
-              v-for="(item, index) in serverList"
-              :key="index"
-            >
+            <div class="col-xs-12 col-sm-6 col-md-3 server-wrapper" v-for="(item, index) in serverList" :key="index">
               <div class="server-block wow slideInUp">
                 <img class="center-block" :src="item.logo" alt="logo" />
                 <p class="text-center">{{ item.title }}</p>
@@ -80,17 +72,12 @@
             —— Develop into a large-scale comprehensive enterprise serving the
             whole country ——
           </h3>
-          <a
-            href="#"
-            class="btn btn-lg btn-block btn-info"
-            style="
+          <a href="#" class="btn btn-lg btn-block btn-info" style="
               background: rgb(186, 154, 81);
               border: none;
               width: 24%;
               margin: 0 auto;
-            "
-            >联系我们</a
-          >
+            ">联系我们</a>
           <div class="contactUs-contactWay">
             <span></span>
             <span></span>
@@ -134,12 +121,7 @@
               </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-4 wow zoomIn">
-              <img
-                class="img-responsive"
-                style="height: 380px; margin: 0 auto; min-width: 380px"
-                src="@/assets/img/gg.jpg"
-                alt=""
-              />
+              <img class="img-responsive" style="height: 380px; margin: 0 auto; min-width: 380px" src="@/assets/img/gg.jpg" alt="" />
             </div>
             <div class="col-xs-12 col-sm-12 col-md-4 tip-group">
               <div class="tip-item">
@@ -178,23 +160,16 @@
         <div class="container customer-container">
           <div class="swiper-container customer-swiper hidden-xs">
             <div class="swiper-wrapper">
-              <div
-                class="swiper-slide customer-block"
-                v-for="(item, index) in customerList"
-                :key="index"
-              >
+              <div class="swiper-slide customer-block" v-for="(item, index) in customerList" :key="index">
                 <div class="customer-logo">
                   <img class="center-block" :src="item.logo" alt="logo" />
                 </div>
                 <div class="customer-yh"></div>
                 <div class="customer-content-name">
-                  <p>XueHao 高级人力资源师</p>
+                  <p>{{item.name}}</p>
                 </div>
                 <div class="customer-content1">
-                  <p>
-                    人力资源协会执行会长、企业家协
-                    会执行会长。曾任上市集团人力资源 总监、投资发展总监
-                  </p>
+                  <p>{{item.title}}</p>
                 </div>
               </div>
             </div>
@@ -202,11 +177,7 @@
             <div class="swiper-button-next"></div>
           </div>
           <div class="row visible-xs customer-block">
-            <div
-              class="col-xs-12"
-              v-for="(item, index) in customerList"
-              :key="index"
-            >
+            <div class="col-xs-12" v-for="(item, index) in customerList" :key="index">
               <div class="customer-logo">
                 <img class="center-block" :src="item.logo" alt="logo" />
               </div>
@@ -214,7 +185,7 @@
                 <img src="@/assets/img/yinhao.png" alt="引号" />
               </div>
               <div class="customer-content-name">
-                <p>XueHao 高级人力资源师</p>
+                <p>{{item.name}}</p>
               </div>
               <div class="customer-content2">
                 <small>{{ item.title }}</small>
@@ -232,11 +203,7 @@
             <p class="yl-sub-title">—— our responsibility ——</p>
           </div>
           <div class="row">
-            <div
-              class="col-xs-12 col-sm-6 col-md-3 server-wrapper"
-              v-for="(item, index) in serverList1"
-              :key="index"
-            >
+            <div class="col-xs-12 col-sm-6 col-md-3 server-wrapper" v-for="(item, index) in serverList1" :key="index">
               <div class="yl-img-box">
                 <img :src="item.logo" alt="" />
               </div>
@@ -275,10 +242,7 @@
           <div class="row row-logo">
             <div class="row-logo-item" v-for="(item, index) in 10" :key="index">
               <div class="partner-img-box">
-                <img
-                  :src="require('../../assets/img/logo' + item + '.png')"
-                  alt=""
-                />
+                <img :src="require('../../assets/img/logo' + item + '.png')" alt="" />
               </div>
             </div>
           </div>
@@ -325,33 +289,39 @@ export default {
       customerList: [
         {
           logo: require("@/assets/img/img15.png"),
+          name: '谭XueHao 高级人力资源师',
           title:
-            "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
+            "从事人力资源规划、招聘与配置、培训与开发、绩效管理、薪酬福利管理、劳动关系管理",
         },
         {
           logo: require("@/assets/img/img15.png"),
+          name: 'David 高级人力资源师',
           title:
-            "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
+            "从事人力资源规划、招聘与配置、培训与开发、绩效管理、薪酬福利管理、劳动关系管理",
         },
         {
           logo: require("@/assets/img/img15.png"),
+          name: 'SuSam 高级人力资源师',
           title:
-            "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
+            "从事人力资源规划、招聘与配置、培训与开发、绩效管理、薪酬福利管理、劳动关系管理",
         },
         {
           logo: require("@/assets/img/img15.png"),
+          name: '李明 中级人力资源师',
           title:
-            "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
+            "从事人力资源规划、招聘与配置、培训与开发、绩效管理、薪酬福利管理、劳动关系管理",
         },
         {
           logo: require("@/assets/img/img15.png"),
+          name: '丁伦 中级人力资源师',
           title:
-            "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
+            "从事人力资源规划、招聘与配置、培训与开发、绩效管理、薪酬福利管理、劳动关系管理",
         },
         {
           logo: require("@/assets/img/img15.png"),
+          name: 'YaYa 初级人力资源师',
           title:
-            "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
+            "从事人力资源规划、招聘与配置、培训与开发、绩效管理、薪酬福利管理、劳动关系管理",
         },
       ],
       serverList: [
@@ -368,7 +338,7 @@ export default {
         {
           logo: require("@/assets/img/qq.png"),
           title: "人事岗位外包服务",
-          content: "<p>3、为企业提供专业人资模块解决方案",
+          content: "<p>为企业提供专业人资模块解决方案",
         },
         {
           logo: require("@/assets/img/skill.png"),
@@ -484,7 +454,6 @@ export default {
   transition: 1s linear 2s;
   transform: scale(1.1, 1.1);
 } */
-
 
 #swiper .banner-swiper .swiper-slide-active img,
 #swiper .banner-swiper .swiper-slide-duplicate-active img {
@@ -797,7 +766,7 @@ export default {
     margin-top: 22%;
     display: none;
   }
-   #swiper .banner-swiper .swiper-slide-title > h3 {
+  #swiper .banner-swiper .swiper-slide-title > h3 {
     display: none;
   }
   #ourSuccess .success-item {
@@ -859,10 +828,10 @@ export default {
     font-size: 20px !important;
   }
 
-    #swiper .banner-swiper .swiper-slide-title > h1 {
+  #swiper .banner-swiper .swiper-slide-title > h1 {
     display: none;
   }
-   #swiper .banner-swiper .swiper-slide-title > h3 {
+  #swiper .banner-swiper .swiper-slide-title > h3 {
     display: none;
   }
 }
@@ -905,9 +874,14 @@ export default {
   flex-wrap: wrap;
 }
 
-.row-logo-item {
+.row-logo .row-logo-item {
   width: 20%;
   margin-bottom: 20px;
+}
+
+.row-logo-item:nth-of-type(8) .partner-img-box img{
+  height: 62%;
+  width: auto;
 }
 
 .partner-img-box {
@@ -922,6 +896,7 @@ export default {
 .partner-img-box img {
   height: 100%;
   width: auto;
+  max-width: 100%;
 }
 
 .visible-xs > div:nth-of-type(odd) {

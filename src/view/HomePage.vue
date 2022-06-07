@@ -96,7 +96,7 @@
       <div class="container contactUs-container wow slideInUp">
         <h1>发展成为服务于全国的大型综合性人力资源服务企业</h1>
         <h3>—— Comprehensive human resource service enterprise ——</h3>
-        <a href="#" class="btn btn-lg btn-block btn-info" style="background:rgb(186, 154, 81);border:none;width:24%;margin:0 auto">联系我们</a>
+        <a href="#" class="btn btn-lg btn-block btn-info" style="background:#B18147;border:none;width:24%;margin:0 auto">联系我们</a>
         <div class="contactUs-contactWay">
           <span></span>
           <span></span>

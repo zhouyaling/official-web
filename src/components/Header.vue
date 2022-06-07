@@ -128,11 +128,11 @@ export default {
           path: "service.html",
           children: [],
         },
-        {
-          name: "新闻动态",
-          path: "news.html",
-          children: [],
-        },
+        // {
+        //   name: "新闻动态",
+        //   path: "news.html",
+        //   children: [],
+        // },
         {
           name: "联系我们",
           path: "contact.html",
@@ -232,7 +232,8 @@ export default {
   margin: 0;
   max-width: 800px;
   position: absolute;
-  right: 210px;
+  /* right: 210px; */
+  right: 300px;
 }
 /* 导航栏 每个导航 */
 #header .header-nav .header-nav-wrapper > li {
@@ -259,7 +260,7 @@ export default {
   height: 2px;
   opacity: 0;
   transition: all 0.6s ease;
-  background-color: rgb(186, 154, 81);
+  background-color: rgb(177,129,71);
 }
 /* 导航栏 每个导航下面的 a 链接的右侧小三角 */
 #header .header-nav .header-nav-wrapper > li > a > span {
@@ -268,7 +269,7 @@ export default {
 }
 /* 导航栏 每个导航下面的 a 链接 鼠标滑上去的样式 */
 #header .header-nav .header-nav-wrapper > li > a:hover {
-  color: rgb(186, 154, 81);
+  color: rgb(177,129,71);
   text-decoration: none;
 }
 /* 导航栏 每个导航下面的 a 链接 鼠标滑上去下划线的样式 */
@@ -283,9 +284,9 @@ export default {
 }
 /* 导航栏 每个导航下面的 a 链接 鼠标点击后的样式 */
 #header .header-nav .header-nav-wrapper > li.active > a {
-  color: rgb(186, 154, 81);
+  color: rgb(177,129,71);
   text-decoration: none;
-  border-bottom: 2px solid rgb(186, 154, 81);
+  border-bottom: 2px solid rgb(177,129,71);
   font-weight: 600;
 }
 /* 导航栏 每个导航下面的二级导航容器 */
@@ -405,7 +406,7 @@ export default {
 }
 
 .hot-phone {
-  color: rgb(186, 154, 81);
+  color: rgb(177,129,71);
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -425,8 +426,8 @@ export default {
   font-size: 30px;
   font-weight: 600;
   line-height: 30px;
-  letter-spacing: -1px;
-  background: linear-gradient(180deg, #ffffff 0%, rgb(186, 154, 81) 70%);
+  letter-spacing: 0.5px;
+  background: linear-gradient(180deg, #ffffff 0%, rgb(177,129,71) 70%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
