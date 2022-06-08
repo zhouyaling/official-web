@@ -29,7 +29,7 @@
         </div>
       </div> -->
       <!-- 第五部分 优秀猎头-->
-      <div id="customer" class="container-fuild">
+      <!-- <div id="customer" class="container-fuild">
         <div class="customer-title text-center">
           <p>优秀猎头</p>
           <p>—— WE ARE MOST PROUD OF, IT IS HAS BEEN “FOCUS”——</p>
@@ -73,7 +73,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </page-layout>
 </template>

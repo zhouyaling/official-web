@@ -152,7 +152,7 @@
       </div>
 
       <!-- 第五部分 优秀猎头-->
-      <div id="customer" class="container-fuild">
+      <!-- <div id="customer" class="container-fuild">
         <div class="whyChooseUs-title text-center">
           <p>优秀猎头</p>
           <p>—— Excellent headhunter ——</p>
@@ -193,7 +193,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
       <!-- 第六部分 我们的服务 -->
       <div id="whyChooseUs" class="other conatiner-fuild">
@@ -500,7 +500,6 @@ export default {
   padding: 100px 100px 100px 100px;
   transition: all ease 0.6s;
   box-sizing: border-box;
-  /* background: url('../../assets/img/hh.jpg'); */
 }
 #bigData .whyChooseUs-title {
   margin-bottom: 50px;
