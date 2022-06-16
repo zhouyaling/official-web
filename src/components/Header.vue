@@ -5,7 +5,7 @@
     <!-- <div class="header-top container-fuild hidden-xs">
       <div class="container">
         <div class="server pull-left">
-          <span class="glyphicon glyphicon-earphone"></span>032-65259611
+          <span class="glyphicon glyphicon-earphone"></span>023-65259611
           <span class="glyphicon glyphicon-envelope"></span>邮箱：675209079@qq.com
           <span class="glyphicon glyphicon-time"></span>7x24小时为您服务
         </div>
@@ -51,7 +51,7 @@
         <span class="phone-text"
           ><span class="glyphicon glyphicon-earphone"></span>企业咨询热线</span
         >
-        <span class="phone-number">032 - 65259611</span>
+        <span class="phone-number">023 - 65259611</span>
       </div>
     </div>
     <!-- 手机导航 -->

@@ -141,7 +141,7 @@
                   </div>
                 </div>
               </div>
-              <div class="contact-btn">电话咨询：032-65259611</div>
+              <div class="contact-btn">电话咨询：023-65259611</div>
             </div>
           </div>
           <div class="service-wrapper-item" :class="{ active: currentWrapper === 3 }">
@@ -161,7 +161,7 @@
                   </div>
                 </div>
               </div>
-              <div class="contact-btn">电话咨询：032-65259611</div>
+              <div class="contact-btn">电话咨询：023-65259611</div>
             </div>
           </div>
         </div>
